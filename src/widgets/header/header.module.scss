@@ -1,0 +1,98 @@
+.headerWrapper {
+  width: 100%;
+  background-color: var(--primary1);
+}
+.header {
+  padding: 21px 144px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media (max-width: 1355px) {
+    padding: 21px 65px;
+  }
+  @media (max-width: 1220px) {
+    padding: 10px 25px;
+  }
+}
+.nav {
+  display: flex;
+  align-items: center;
+  padding: 2px 4px;
+  gap: var(--base-spacing);
+
+  a {
+    position: relative;
+    display: inline-block;
+    padding: 8px 4px;
+    color: var(--secondary3);
+    font-size: 16px;
+    @media (max-width: 1219px) {
+      font-size: 14px;
+    }
+    font-weight: 600;
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      content: '';
+      width: 0;
+      height: 1px;
+      background: var(--secondary2);
+      transition: width 0.3s;
+    }
+    &:hover::after {
+      width: 100%;
+      transition: width 0.3s;
+    }
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--xs-spacing);
+
+  .tel {
+    position: relative;
+    display: inline-block;
+    padding: 8px 4px;
+    color: var(--secondary3);
+    font-size: 16px;
+    @media (max-width: 1219px) {
+      font-size: 14px;
+    }
+    font-weight: 600;
+    &:first-child::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      content: '';
+      width: 0;
+      height: 1px;
+      background: var(--secondary2);
+      transition: width 0.3s;
+    }
+    &:first-child:hover::after {
+      width: 100%;
+      transition: width 0.3s;
+    }
+  }
+}
+.accountImage svg path {
+  transition: all ease-in-out 0.3s;
+}
+
+.accountImage:hover {
+  svg path {
+    stroke: var(--secondary2);
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+}
+@media (min-width: 376px) and (max-width: 768px) {
+}
+@media (max-width: 375px) {
+}
