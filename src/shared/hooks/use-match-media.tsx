@@ -34,6 +34,9 @@ export const useMatchMedia = (): MatchMediaValues => {
     if (typeof window !== 'undefined') {
       const mediaQueryLists = queries.map(query => matchMedia(query));
 
+      // Инициализируем состояние при первом рендеринге
+      setValues(getValues(mediaQueryLists));
+
       const handler = () => setValues(getValues(mediaQueryLists));
 
       mediaQueryLists.forEach(list => list.addEventListener('change', handler));
