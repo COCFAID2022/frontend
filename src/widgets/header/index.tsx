@@ -8,6 +8,9 @@ import classNames from 'classnames';
 import { Button } from '@/shared/ui/button';
 import { useMatchMedia } from '@/shared/hooks/use-match-media';
 import { BurgerMenu } from '@/shared/ui/burger-menu';
+import { Navigation } from '@/widgets/header/navigation';
+
+// TODO пофіксити при рендері вибиває моб версію хедера а має ту що виходить по розширенню вікна
 
 export const Header = () => {
   const { isDesktop } = useMatchMedia();
@@ -21,15 +24,7 @@ export const Header = () => {
           alt={'Поміч 2022'}
           className='logo'
         />
-        {isDesktop && (
-          <nav className={styles.nav}>
-            <Link href={'/'}>Головна</Link>
-            <Link href={'/our-projects'}>Наші проекти</Link>
-            <Link href={'/how-to-help'}>Як допомогти</Link>
-            <Link href={'/news'}>Новини</Link>
-            <Link href={'/lang'}>UA</Link>
-          </nav>
-        )}
+        <Navigation />
 
         <div className={styles.actions}>
           <Link className={styles.tel} href={'tel:+380666591297'}>
