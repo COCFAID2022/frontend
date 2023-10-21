@@ -1,0 +1,36 @@
+.box {
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  display: inline-block;
+  font-size: 40px;
+  font-weight: 600;
+  padding: var(--sm-spacing);
+  text-transform: uppercase;
+}
+.light {
+  color: var(--secondary3);
+}
+.dark {
+  color: var(--primary1);
+}
+.line {
+  width: 800px;
+  height: 4px;
+  border-radius: 60px;
+  opacity: 0.2;
+  background: var(--primary1);
+}
+.left {
+  align-items: flex-start;
+}
+.right {
+  align-items: flex-end;
+}
+.left .title {
+  margin-left: 32px;
+}
+.right .title {
+  margin-right: 32px;
+}
