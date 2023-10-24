@@ -1,0 +1,38 @@
+.news_section {
+  width: 100%;
+
+  background-color: var(--primary1);
+
+  .sectionTitleSpace {
+    margin-bottom: 32px;
+  }
+  .news_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px 16px;
+    // justify-content: center;
+
+    li {
+      list-style: none;
+    }
+  }
+}
+
+.container_newsList {
+  margin-left: auto;
+  margin-right: auto;
+  width: 375px;
+  padding: 0 14px;
+}
+@media screen and (min-width: 834px) {
+  .container_newsList {
+    width: 834px;
+    padding: 0 40px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container_newsList {
+    width: 1176px;
+    padding: 0 40px;
+  }
+}

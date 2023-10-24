@@ -14,7 +14,12 @@ export const SectionTitle: FC<SectionTitleProps> = props => {
   return (
     <div className={classNames(styles.box, styles[position], cls)}>
       <h2 className={classNames(styles.title, styles[variant])}>{children}</h2>
-      <div className={styles.line}></div>
+      <div
+        // className={variant === 'dark' ? styles.line : styles.line_light}
+        className={classNames(
+          styles.line,
+          variant !== 'dark' && styles.line_light
+        )}></div>
     </div>
   );
 };
