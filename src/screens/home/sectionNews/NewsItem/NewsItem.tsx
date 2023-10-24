@@ -22,7 +22,7 @@ const NewsItem = ({ news, newClass }: Props) => {
           <Button
             shadow={'regular-shadow'}
             // value={''}
-            buttonSize={'small'}
+            buttonSize={'medium'}
             mode={'dark'}
             iconColors={{
               iconColor: 'icon-light',
