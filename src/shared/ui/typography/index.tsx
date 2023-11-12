@@ -1,12 +1,16 @@
 import styles from './typography.module.scss';
 import { createElement, FC, PropsWithChildren } from 'react';
 import classNames from 'classnames';
+import {
+  TypeHtmlFontWeight,
+  TypeHtmlHeading,
+} from '@/shared/app/types/htmlElements';
 interface TypographyProps extends PropsWithChildren {
   className?: string;
-  fontWeight: 'semiBold' | 'regular' | 'bold';
+  fontWeight: TypeHtmlFontWeight;
   size?: 'large';
   type?: 'body' | 'lead';
-  element: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'h7' | 'p';
+  element: TypeHtmlHeading;
 }
 
 export const Typography: FC<TypographyProps> = props => {
