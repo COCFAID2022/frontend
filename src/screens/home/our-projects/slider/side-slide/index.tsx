@@ -20,11 +20,13 @@ export const SideSlide: FC<SideSlideProps> = props => {
       initialSlide={initialSlide}
       ref={sliderRef}
       loop={true}
-      className={styles.slider}
-      onClick={onClickHandler}>
+      className={styles.slider}>
       {sliderItems.map((item, index) => {
         return (
-          <SwiperSlide key={item.projectName} className={styles.slide}>
+          <SwiperSlide
+            key={item.projectName}
+            onClick={onClickHandler}
+            className={styles.slide}>
             <Slide item={item} />
           </SwiperSlide>
         );

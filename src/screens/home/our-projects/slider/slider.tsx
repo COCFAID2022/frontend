@@ -17,18 +17,17 @@ export const Slider = () => {
   const rightSliderRef = useRef<SwiperRef>(null);
 
   const onClickPrevSlide = () => {
+    console.log('prev');
     mainSliderRef.current?.swiper.slidePrev();
     leftSliderRef.current?.swiper.slidePrev();
     rightSliderRef.current?.swiper.slidePrev();
   };
   const onClickNextSlide = () => {
+    console.log('next');
     mainSliderRef.current?.swiper.slideNext();
     leftSliderRef.current?.swiper.slideNext();
     rightSliderRef.current?.swiper.slideNext();
   };
-
-  const navigationPrevHandler = () => {};
-  const navigationNextHandler = () => {};
 
   const onMainSlideChange = (swiper: SwiperType) => {
     const { swipeDirection } = swiper;
