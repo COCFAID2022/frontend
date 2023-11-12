@@ -3,7 +3,7 @@
 @import 'variables';
 
 * {
-  font-family: 'Montserrat Alternates', sans-serif;
+  font-family: var(--font-Montserrat_Alternates);
   font-weight: 400;
 }
 html,
