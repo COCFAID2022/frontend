@@ -32,7 +32,7 @@ export const Button: FC<ButtonProps> = props => {
 
   const iconClasses = classNames(
     styles.iconWrapper,
-    styles[icon!.variant],
+    styles[icon.variant],
     styles[size]
   );
 
@@ -55,13 +55,28 @@ export const Button: FC<ButtonProps> = props => {
         </div>
       )}
 
-      {value && (
+      {value && label && (
+        <div className={styles.valueWithLabel}>
+          <Typography
+            fontWeight={'regular'}
+            element={'h7'}
+            className={styles.label}>
+            {label}
+          </Typography>
+          <Typography
+            fontWeight={value.fontWeight}
+            element={value.element}
+            className={styles.value}>
+            {value.text}
+          </Typography>
+        </div>
+      )}
+
+      {value && !label && (
         <Typography
           fontWeight={value.fontWeight}
           element={value.element}
-          className={classNames(styles.value, styles[size], {
-            [styles.blueColor]: value.color === 'blue',
-          })}>
+          className={valueClasses}>
           {value.text}
         </Typography>
       )}
