@@ -13,7 +13,7 @@ body {
 }
 
 .container {
-  max-width: 1440px;
+  max-width: 1080px;
   width: 100%;
   margin: 0 auto;
 }
@@ -25,4 +25,8 @@ main {
 .layout-css {
   display: flex;
   flex-direction: column;
+}
+
+button {
+  background: none;
 }
