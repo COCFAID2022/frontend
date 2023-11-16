@@ -1,0 +1,32 @@
+.form_info {
+  max-width: 276px;
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+}
+.input {
+  width: 100%;
+  padding: 10px 10px 10px 20px;
+  border-radius: 60px;
+  border: 1px solid var(--secondaryGreyColor1);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 120%;
+  outline: none;
+  &::placeholder {
+    opacity: 0.6;
+  }
+}
+.textarea {
+  height: 172px;
+  border-radius: 30px;
+  resize: none;
+}
+.error {
+  padding-top: 10px;
+  font-size: 12px;
+  color: red;
+}
