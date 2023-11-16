@@ -10,6 +10,7 @@ import {
 } from '@/shared/app/types/htmlElements';
 
 interface ButtonProps {
+  buttonType?: 'button' | 'submit';
   variant: 'outlined' | 'default';
   value?: {
     text: string;
@@ -28,7 +29,7 @@ interface ButtonProps {
 }
 
 export const Button: FC<ButtonProps> = props => {
-  const { icon, size, label, variant, value } = props;
+  const { icon, buttonType = 'button', size, label, variant, value } = props;
 
   const iconClasses = classNames(
     styles.iconWrapper,
@@ -44,6 +45,7 @@ export const Button: FC<ButtonProps> = props => {
 
   return (
     <button
+      type={buttonType === 'submit' ? 'submit' : 'button'}
       className={classNames(styles.button, styles[variant], styles[size])}>
       {icon && icon.position === 'left' && (
         <div className={iconClasses}>
