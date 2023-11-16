@@ -1,0 +1,31 @@
+.title {
+  margin-bottom: 16px;
+}
+.subtitle {
+  color: var(--primaryBlueColor1);
+  margin-bottom: 16px;
+}
+
+.info {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 64px;
+}
+.imageWrapper {
+  max-width: 430.667px;
+  width: 100%;
+  flex-shrink: 0;
+  border-radius: 6px;
+  border: 1px solid var(--secondaryGreyColor3);
+  img {
+    width: 250px;
+    object-fit: cover;
+    margin: 67px 96px 61px 83px;
+  }
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
