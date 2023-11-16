@@ -1,0 +1,17 @@
+.slide {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+  border-radius: 6px;
+  border: 1.5px solid var(--secondaryGreyColor1);
+  padding: 30px;
+}
+.image {
+  width: 250px;
+  height: 193px;
+}
+.title {
+}
+.subtitle {
+}

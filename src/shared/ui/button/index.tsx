@@ -10,6 +10,7 @@ import {
 } from '@/shared/app/types/htmlElements';
 
 interface ButtonProps {
+  buttonType?: 'button' | 'submit';
   variant: 'outlined' | 'default';
   value?: {
     text: string;
@@ -28,11 +29,11 @@ interface ButtonProps {
 }
 
 export const Button: FC<ButtonProps> = props => {
-  const { icon, size, label, variant, value } = props;
+  const { icon, buttonType = 'button', size, label, variant, value } = props;
 
   const iconClasses = classNames(
     styles.iconWrapper,
-    styles[icon!.variant],
+    styles[icon.variant],
     styles[size]
   );
 
@@ -44,6 +45,7 @@ export const Button: FC<ButtonProps> = props => {
 
   return (
     <button
+      type={buttonType === 'submit' ? 'submit' : 'button'}
       className={classNames(styles.button, styles[variant], styles[size])}>
       {icon && icon.position === 'left' && (
         <div className={iconClasses}>
@@ -55,13 +57,29 @@ export const Button: FC<ButtonProps> = props => {
         </div>
       )}
 
-      {value && (
+      {value && label && (
+        <div className={styles.valueWithLabel}>
+          <Typography
+            fontWeight={'regular'}
+            element={'h7'}
+            className={styles.label}>
+            {label}
+          </Typography>
+          <Typography
+            fontWeight={value.fontWeight}
+            element={value.element}
+            className={styles.value}>
+            {value.text}
+          </Typography>
+        </div>
+      )}
+      {/*change*/}
+
+      {value && !label && (
         <Typography
           fontWeight={value.fontWeight}
           element={value.element}
-          className={classNames(styles.value, styles[size], {
-            [styles.blueColor]: value.color === 'blue',
-          })}>
+          className={valueClasses}>
           {value.text}
         </Typography>
       )}

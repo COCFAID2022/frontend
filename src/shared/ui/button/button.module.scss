@@ -22,6 +22,18 @@
   border: 1px solid var(--secondaryGreyColor1);
 }
 
+//Label
+.valueWithLabel {
+  display: flex;
+  flex-direction: column;
+  .label {
+    text-align: start;
+  }
+  .value {
+    padding: 0 10px 0 0;
+  }
+}
+
 //Icon
 .iconWrapper {
   display: flex;
