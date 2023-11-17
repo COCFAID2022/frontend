@@ -45,31 +45,37 @@ export const Header = () => {
 
       <LangSwitcher />
 
-      <Button
-        variant={'outlined'}
-        size={'sm'}
-        icon={{ variant: 'blue', position: 'left', image: phoneIcon }}
-        label={'Гаряча лінія'}
-        value={{
-          element: 'h7',
-          fontWeight: 'semiBold',
-          color: 'blue',
-          text: '050 612 45 68',
-          className: styles.buttonTel,
-        }}
-      />
-      <Button
-        variant={'outlined'}
-        size={'sm'}
-        icon={{ variant: 'blue', position: 'left', image: arrowTopRightLight }}
-        value={{
-          text: 'Підтримати',
-          color: 'blue',
-          fontWeight: 'semiBold',
-          element: 'h7',
-          className: styles.buttonSupport,
-        }}
-      />
+      <div className={styles.buttonTel}>
+        <Button
+          variant={'outlined'}
+          size={'sm'}
+          icon={{ variant: 'blue', position: 'left', image: phoneIcon }}
+          label={'Гаряча лінія'}
+          value={{
+            element: 'h7',
+            fontWeight: 'semiBold',
+            color: 'blue',
+            text: '050 612 45 68',
+          }}
+        />
+      </div>
+      <div className={styles.buttonSupport}>
+        <Button
+          variant={'outlined'}
+          size={'sm'}
+          icon={{
+            variant: 'blue',
+            position: 'left',
+            image: arrowTopRightLight,
+          }}
+          value={{
+            text: 'Підтримати',
+            color: 'blue',
+            fontWeight: 'semiBold',
+            element: 'h7',
+          }}
+        />
+      </div>
 
       <div className={styles.burger}>
         <Image src={burgerIcon} alt={'burger'} />
