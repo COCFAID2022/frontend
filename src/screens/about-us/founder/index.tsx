@@ -5,7 +5,7 @@ import stubPhoto from '@/shared/assets/img/stub_photo.png';
 import { Border } from '@/shared/ui/border';
 export const Founder = () => {
   return (
-    <section>
+    <section className={'container'}>
       <Typography
         fontWeight={'semiBold'}
         element={'h1'}

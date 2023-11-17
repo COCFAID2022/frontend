@@ -1,0 +1,15 @@
+.langSwitcher {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  button {
+    cursor: pointer;
+  }
+}
+.decore {
+  content: '';
+  width: 15px;
+  height: 1px;
+  transform: rotate(90deg);
+  background-color: var(--secondaryGreyColor1);
+}

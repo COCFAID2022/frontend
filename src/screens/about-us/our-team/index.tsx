@@ -3,9 +3,10 @@ import { Border } from '@/shared/ui/border';
 import styles from './our-team.module.scss';
 import { teamData } from './team-data';
 import { Department } from '@/screens/about-us/our-team/department/department';
+import classNames from 'classnames';
 export const OurTeam = () => {
   return (
-    <section className={styles.ourTeam}>
+    <section className={classNames(styles.ourTeam, 'container')}>
       <Typography
         fontWeight={'semiBold'}
         element={'h1'}

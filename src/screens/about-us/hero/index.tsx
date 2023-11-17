@@ -4,10 +4,11 @@ import Image from 'next/image';
 import { Typography } from '@/shared/ui/typography';
 import { Button } from '@/shared/ui/button';
 import buttonIconLight from '@/shared/assets/icons/arrowTopRightLight.svg';
+import classNames from 'classnames';
 
 export const Hero = () => {
   return (
-    <section className={styles.hero}>
+    <section className={classNames(styles.hero, 'container')}>
       <Image src={UaMap} alt={'map'} className={styles.uaMap} />
 
       <Typography
