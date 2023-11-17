@@ -3,10 +3,11 @@ import { Typography } from '@/shared/ui/typography';
 import Image from 'next/image';
 import ua_map from '@/shared/assets/img/ua_map.png';
 import { FormInfo } from '@/screens/about-us/form/form-info';
+import classNames from 'classnames';
 
 export const Form = () => {
   return (
-    <div className={styles.form}>
+    <div className={classNames('container', styles.form)}>
       <div className={styles.info}>
         <Typography
           fontWeight={'semiBold'}
