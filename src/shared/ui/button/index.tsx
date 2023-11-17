@@ -40,13 +40,18 @@ export const Button: FC<ButtonProps> = props => {
   const valueClasses = classNames(
     styles.value,
     styles[size],
-    value?.className && styles[value.className]
+    value?.className && value.className
   );
 
   return (
     <button
       type={buttonType === 'submit' ? 'submit' : 'button'}
-      className={classNames(styles.button, styles[variant], styles[size])}>
+      className={classNames(
+        styles.button,
+        styles[variant],
+        styles[size],
+        value?.className
+      )}>
       {icon && icon.position === 'left' && (
         <div className={iconClasses}>
           <Image
