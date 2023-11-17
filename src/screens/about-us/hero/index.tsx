@@ -16,7 +16,10 @@ export const Hero = () => {
         size={'large'}
         element={'h1'}
         className={styles.title}>
-        Ми працюємо <span>по всій Україні</span>
+        Ми працюємо{' '}
+        <span>
+          по всій <span className={styles.lastWord}>Україні</span>
+        </span>
       </Typography>
 
       <div className={styles.info}>
