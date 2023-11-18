@@ -1,5 +1,41 @@
-import style from '../StyleHelpPage.module.scss';
-export const News = () => {
+import MainStyle from '../StyleHelpPage.module.scss';
+import React from 'react';
+import style from '../NewsSection/News.module.scss';
+import NewsLoop from './NewsLoop'; 
+
+const News: React.FC = () => {
+    const newsItem = [
+      {
+          news:'Доставили близько 400 автівок військовослужбовцям...',
+          description:'Медикаменти та протези для забезпечення нагальних потреб військовослужбовців після реабілітації',
+          date:'29.10.23'
+      },
+      {
+          news:'Доставили близько 400 автівок військовослужбовцям...',
+          description:'Медикаменти та протези для забезпечення нагальних потреб військовослужбовців після реабілітації',
+          date:'29.10.23'
+      },
+      {
+          news:'Доставили близько 400 автівок військовослужбовцям...',
+          description:'Медикаменти та протези для забезпечення нагальних потреб військовослужбовців після реабілітації',
+          date:'29.10.23'
+      },
+      {
+          news:'Доставили близько 400 автівок військовослужбовцям...',
+          description:'Медикаменти та протези для забезпечення нагальних потреб військовослужбовців після реабілітації',
+          date:'29.10.23'
+      },
+      {
+          news:'Доставили близько 400 автівок військовослужбовцям...',
+          description:'Медикаменти та протези для забезпечення нагальних потреб військовослужбовців після реабілітації',
+          date:'29.10.23'
+      },
+      {
+          news:'Доставили близько 400 автівок військовослужбовцям...',
+          description:'Медикаменти та протези для забезпечення нагальних потреб військовослужбовців після реабілітації',
+          date:'29.10.23'
+      },
+    ];
     return(
         <section className={style['block-news']}id="block-hepl">
             <div className={style["block-help-header"]}>
@@ -7,7 +43,9 @@ export const News = () => {
                 <p className={style["block-help-header__sibtitle"]}>Активні напрямки допомоги</p>
             </div>
             <hr/>
-            <div className={`${style['block-help-cards']} ${style.flex}`} id="block-news-cards"></div>
+            <NewsLoop newsItems={newsItem}  />
         </section>
     )
 }
+
+export default News;

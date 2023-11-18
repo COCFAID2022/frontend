@@ -1,4 +1,5 @@
-import style from '../StyleHelpPage.module.scss';
+import MainStyle from '../StyleHelpPage.module.scss';
+import style from '../HelpSection/Help.module.scss';
 // import script from '../ScriptPageHelp.module'
 export const Help = () => {
     return(
@@ -8,7 +9,7 @@ export const Help = () => {
                 <p className={style["block-help-header__sibtitle"]}>Активні напрямки допомоги</p>
             </div>
             <hr/>
-            <div className={`${style['block-help-cards']} ${style.flex}`} id="block-help-cards"></div>
+            <div className={`${style['block-help-cards']} ${MainStyle.flex}`} id="block-help-cards"></div>
         </section>
     )
 }

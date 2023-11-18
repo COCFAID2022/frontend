@@ -1,8 +1,16 @@
-import style from '../StyleHelpPage.module.scss';
+import MainStyle from '../StyleHelpPage.module.scss';
+import style from '../Navbar/Navbar.module.scss';
+import Logo from '../image/logo-navbar.png';
+import Image from 'next/image';
 export const Navbar = () => {
     return(
          <nav className={style.nav}>
-         <img className={style['nav__logo']} src="/image/logo-navbar.png" alt=""/>
+         <Image
+          src={Logo}
+          priority={true}
+          alt={'nav-logo'}
+          className='nav__logo'
+        />
              <div className={style["nav-links"]}>
                  <a className={`${style["nav-links__link"]} ${style['active-link']}`} href="#">Про нас </a>
                  <a className={style["nav-links__link"]} href="#">Наші проекти </a>
@@ -27,3 +35,4 @@ export const Navbar = () => {
      </nav>
     )
 }
+
