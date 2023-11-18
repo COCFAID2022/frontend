@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "es-lint": "eslint . --fix"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.2",
@@ -24,8 +25,12 @@
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
-    "eslint": "latest",
+    "@typescript-eslint/eslint-plugin": "^6.11.0",
+    "eslint": "^8.54.0",
+    "eslint-config-airbnb": "^19.0.4",
     "eslint-config-next": "latest",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
     "prettier": "^3.0.3",
     "typescript": "latest"
   }

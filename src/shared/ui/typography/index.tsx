@@ -1,10 +1,13 @@
-import styles from './typography.module.scss';
-import { createElement, FC, PropsWithChildren } from 'react';
 import classNames from 'classnames';
+import { createElement, FC, PropsWithChildren } from 'react';
+
 import {
   TypeHtmlFontWeight,
   TypeHtmlHeading,
 } from '@/shared/app/types/htmlElements';
+
+import styles from './typography.module.scss';
+
 interface TypographyProps extends PropsWithChildren {
   className?: string;
   fontWeight: TypeHtmlFontWeight;

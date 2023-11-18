@@ -1,12 +1,16 @@
 'use client';
-import { FC, useRef } from 'react';
-import { TypeTeamData } from '../team-data';
-import { Swiper, SwiperRef, SwiperSlide } from 'swiper/react';
-import { WorkerSlide } from '@/screens/about-us/our-team/worker-slider/worker-slide';
+
 import 'swiper/css';
-import styles from './team-slider.module.scss';
-import { SliderNavigationButtons } from '@/screens/about-us/our-team/team-slider/slider-navigation-buttons/slider-navigation-buttons';
+
+import { FC, useRef } from 'react';
+import { Swiper, SwiperRef, SwiperSlide } from 'swiper/react';
 import { SwiperOptions } from 'swiper/types';
+
+import { SliderNavigationButtons } from '@/screens/about-us/our-team/team-slider/slider-navigation-buttons/slider-navigation-buttons';
+import { WorkerSlide } from '@/screens/about-us/our-team/worker-slider/worker-slide';
+
+import { TypeTeamData } from '../team-data';
+import styles from './team-slider.module.scss';
 
 type TypeTeamSliderProps = Pick<TypeTeamData, 'workers'>;
 
@@ -46,13 +50,11 @@ export const TeamSlider: FC<TypeTeamSliderProps> = props => {
         onClickNextSlide={onClickNextSlide}
         onClickPrevSlide={onClickPrevSlide}
       />
-      {workers.map(worker => {
-        return (
-          <SwiperSlide key={worker.id}>
-            <WorkerSlide worker={worker} />
-          </SwiperSlide>
-        );
-      })}
+      {workers.map(worker => (
+        <SwiperSlide key={worker.id}>
+          <WorkerSlide worker={worker} />
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 };
