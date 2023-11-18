@@ -1,4 +1,5 @@
 'use client';
+
 import classNames from 'classnames';
 import Image from 'next/image';
 import { FC } from 'react';
@@ -80,7 +81,7 @@ export const Button: FC<ButtonProps> = props => {
           </Typography>
         </div>
       )}
-      {/*change*/}
+      {/* change */}
 
       {value && !label && (
         <Typography

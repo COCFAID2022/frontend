@@ -1,7 +1,8 @@
 'use client';
+
 import { yupResolver } from '@hookform/resolvers/yup';
 import classNames from 'classnames';
-import { SubmitHandler,useForm } from 'react-hook-form';
+import { SubmitHandler, useForm } from 'react-hook-form';
 
 import arrowRightLight from '@/shared/assets/icons/arrowTopRightLight.svg';
 import { Button } from '@/shared/ui/button';
@@ -14,7 +15,6 @@ export const FormInfo = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
     reset,
   } = useForm<TypeSchema>({ resolver: yupResolver(schema) });

@@ -17,10 +17,16 @@ export const SliderNavigationButtons: FC<
   const { onClickPrevSlide, onClickNextSlide } = props;
   return (
     <div className={styles.navigationButtons}>
-      <button onClick={onClickPrevSlide} className={styles.button}>
+      <button
+        type={'button'}
+        onClick={onClickPrevSlide}
+        className={styles.button}>
         <Image src={sliderLeft} alt={'arrow-left'} />
       </button>
-      <button onClick={onClickNextSlide} className={styles.button}>
+      <button
+        type={'button'}
+        onClick={onClickNextSlide}
+        className={styles.button}>
         <Image src={sliderRight} alt={'arrow-right'} />
       </button>
     </div>

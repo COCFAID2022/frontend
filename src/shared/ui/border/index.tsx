@@ -1,8 +1,13 @@
 import classNames from 'classnames';
+import { FC } from 'react';
 
 import styles from './border.module.scss';
 
-export const Border = (props: { className?: string }) => {
+interface BorderProps {
+  className?: string;
+}
+
+export const Border: FC<BorderProps> = props => {
   const { className = '' } = props;
-  return <div className={classNames(styles.border, className)}></div>;
+  return <div className={classNames(styles.border, className)} />;
 };

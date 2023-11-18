@@ -45,7 +45,12 @@ export const teamData: TypeTeamData[] = [
     description:
       'Lorem ipsum dolor sit amet consectetur. Ornare diam bibendum purus non ut facilisis. Hendrerit orci mattis platea porttitor. ',
     workers: [
-      { id: 4, img: photo, fullName: "Ім'я та прізвище", position: 'Дизайнер' },
+      {
+        id: 4,
+        img: photo,
+        fullName: "Ім'я та прізвище",
+        position: 'Дизайнер',
+      },
       {
         id: 5,
         img: photo,

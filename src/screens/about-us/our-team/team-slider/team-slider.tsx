@@ -1,4 +1,5 @@
 'use client';
+
 import 'swiper/css';
 
 import { FC, useRef } from 'react';
@@ -49,13 +50,11 @@ export const TeamSlider: FC<TypeTeamSliderProps> = props => {
         onClickNextSlide={onClickNextSlide}
         onClickPrevSlide={onClickPrevSlide}
       />
-      {workers.map(worker => {
-        return (
-          <SwiperSlide key={worker.id}>
-            <WorkerSlide worker={worker} />
-          </SwiperSlide>
-        );
-      })}
+      {workers.map(worker => (
+        <SwiperSlide key={worker.id}>
+          <WorkerSlide worker={worker} />
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 };

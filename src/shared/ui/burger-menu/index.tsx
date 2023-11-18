@@ -1,4 +1,5 @@
 'use client';
+
 import classNames from 'classnames';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -15,31 +16,32 @@ export const BurgerMenu = () => {
   return (
     <>
       <button
+        type={'button'}
         className={classNames(styles.menuBtn, {
           [styles.active]: open,
         })}
         onClick={openMenuHandler}>
-        <span></span>
-        <span></span>
-        <span></span>
+        <span />
+        <span />
+        <span />
       </button>
       <div className={classNames(styles.menu, { [styles.active]: open })}>
         <nav>
           <ul>
             <li>
-              <Link href='#'>Про нас</Link>
+              <Link href={'/'}>Про нас</Link>
             </li>
             <li>
-              <Link href='#'>Наші проекти</Link>
+              <Link href={'/'}>Наші проекти</Link>
             </li>
             <li>
-              <Link href='#'>Як допомогти</Link>
+              <Link href={'/'}>Як допомогти</Link>
             </li>
             <li>
-              <Link href='#'>Новини</Link>
+              <Link href={'/'}>Новини</Link>
             </li>
             <li>
-              <Link href='#'>UA</Link>
+              <Link href={'/'}>UA</Link>
             </li>
           </ul>
         </nav>

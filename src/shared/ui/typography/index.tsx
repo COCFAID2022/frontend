@@ -7,6 +7,7 @@ import {
 } from '@/shared/app/types/htmlElements';
 
 import styles from './typography.module.scss';
+
 interface TypographyProps extends PropsWithChildren {
   className?: string;
   fontWeight: TypeHtmlFontWeight;

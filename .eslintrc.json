@@ -1,7 +1,39 @@
 {
-  "extends": "next/core-web-vitals",
-  "plugins" :  [ "simple-import-sort" ] ,
-  "rules" :  {
-    "simple-import-sort/imports" :  "error"
+  "extends": [
+    "next/core-web-vitals",
+    "airbnb",
+    "plugin:prettier/recommended",
+    "airbnb/hooks",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended"
+  ],
+  "plugins": ["simple-import-sort"],
+  "rules": {
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "jsx-quotes": [2, "prefer-single"],
+    "react/require-default-props": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-curly-brace-presence": ["error", { "props": "always" }],
+    "simple-import-sort/imports": "error",
+    "react/react-in-jsx-scope": "off",
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": ["arrow-function", "function-declaration"],
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    "import/prefer-default-export": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".tsx", ".ts"] }]
   }
 }
