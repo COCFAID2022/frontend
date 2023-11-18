@@ -1,110 +1,103 @@
 'use client';
-import { FC, useState } from 'react';
-
-import styles from './button.module.scss';
+import { FC } from 'react';
 import classNames from 'classnames';
-import Link from 'next/link';
+import styles from './button.module.scss';
+import Image from 'next/image';
+import { Typography } from '@/shared/ui/typography';
+import {
+  TypeHtmlFontWeight,
+  TypeHtmlHeading,
+} from '@/shared/app/types/htmlElements';
 
 interface ButtonProps {
-  shadow: 'regular-shadow';
-  iconColors: {
-    iconColor: 'icon-light' | 'icon-dark';
-    main: 'bg-blue' | 'bg-lightBlue' | 'bg-white';
-    active: 'active-bg-to-light-blue' | 'active-bg-to-white' | 'active-bg-blue';
+  buttonType?: 'button' | 'submit';
+  variant: 'outlined' | 'default';
+  value?: {
+    text: string;
+    className?: string;
+    fontWeight: TypeHtmlFontWeight;
+    element: TypeHtmlHeading;
+    color: 'blue' | 'black';
   };
-  mode: 'dark' | 'transparent';
-  buttonSize: 'small' | 'medium';
-  value?: string;
-  soloAnimationWithOutText?: boolean;
-  animationWithText?: boolean;
+  size: 'sm' | 'md' | 'lg';
+  label?: string;
+  icon: {
+    position: 'left' | 'right';
+    image: string;
+    variant: 'blue' | 'black';
+  };
 }
 
 export const Button: FC<ButtonProps> = props => {
-  const {
-    shadow,
-    buttonSize,
-    value,
-    mode,
-    iconColors,
-    soloAnimationWithOutText = false,
-    animationWithText = false,
-  } = props;
-
-  const [showText, setShowText] = useState(false);
-
-  const textClasses = classNames(styles.text, {
-    [styles.smallSpace]: buttonSize === 'small',
-    [styles.mediumSpace]: buttonSize === 'medium',
-  });
+  const { icon, buttonType = 'button', size, label, variant, value } = props;
 
   const iconClasses = classNames(
     styles.iconWrapper,
-    styles[iconColors.main],
-    styles[iconColors.active],
-    {
-      [styles.smallIcon]: buttonSize === 'small',
-      [styles.mediumIcon]: buttonSize === 'medium',
-    }
+    styles[icon.variant],
+    styles[size]
+  );
+
+  const valueClasses = classNames(
+    styles.value,
+    styles[size],
+    value?.className && value.className
   );
 
   return (
-    <button className={classNames(styles.button, styles[mode], styles[shadow])}>
-      {soloAnimationWithOutText ? (
-        <Link href={'/'} className={iconClasses}>
-          <svg
-            className={styles[iconColors.iconColor]}
-            xmlns='http://www.w3.org/2000/svg'
-            width='24'
-            height='24'
-            viewBox='0 0 24 24'
-            fill='none'>
-            <path
-              d='M7 17L17 7'
-              stroke='#000010'
-              strokeWidth='1.25'
-              strokeLinecap='round'
-              strokeLinejoin='round'
-            />
-            <path
-              d='M7 7H17V17'
-              stroke='#000010'
-              strokeWidth='1.25'
-              strokeLinecap='round'
-              strokeLinejoin='round'
-            />
-          </svg>
-        </Link>
-      ) : (
+    <button
+      type={buttonType === 'submit' ? 'submit' : 'button'}
+      className={classNames(
+        styles.button,
+        styles[variant],
+        styles[size],
+        value?.className
+      )}>
+      {icon && icon.position === 'left' && (
         <div className={iconClasses}>
-          <svg
-            className={styles[iconColors.iconColor]}
-            xmlns='http://www.w3.org/2000/svg'
-            width='24'
-            height='24'
-            viewBox='0 0 24 24'
-            fill='none'>
-            <path
-              d='M7 17L17 7'
-              stroke='#000010'
-              strokeWidth='1.25'
-              strokeLinecap='round'
-              strokeLinejoin='round'
-            />
-            <path
-              d='M7 7H17V17'
-              stroke='#000010'
-              strokeWidth='1.25'
-              strokeLinecap='round'
-              strokeLinejoin='round'
-            />
-          </svg>
+          <Image
+            src={icon.image}
+            className={classNames(styles[size])}
+            alt={'icon'}
+          />
         </div>
       )}
 
-      {(animationWithText && showText) ||
-      (!animationWithText && !showText && value) ? (
-        <span className={textClasses}>{value}</span>
-      ) : null}
+      {value && label && (
+        <div className={styles.valueWithLabel}>
+          <Typography
+            fontWeight={'regular'}
+            element={'h7'}
+            className={styles.label}>
+            {label}
+          </Typography>
+          <Typography
+            fontWeight={value.fontWeight}
+            element={value.element}
+            className={styles.value}>
+            {value.text}
+          </Typography>
+        </div>
+      )}
+      {/*change*/}
+
+      {value && !label && (
+        <Typography
+          fontWeight={value.fontWeight}
+          element={value.element}
+          className={valueClasses}>
+          {value.text}
+        </Typography>
+      )}
+
+      {icon && icon.position === 'right' && (
+        <div className={iconClasses}>
+          <Image
+            src={icon.image}
+            className={classNames(styles[size])}
+            alt={'icon'}
+          />
+        </div>
+      )}
     </button>
   );
 };

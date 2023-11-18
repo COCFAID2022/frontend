@@ -1,0 +1,23 @@
+.ourTeam {
+  margin-bottom: 64px;
+}
+
+.title {
+  margin-bottom: 16px;
+  @media (max-width: 480px) {
+    font-size: 24px !important;
+    margin-bottom: 5px;
+  }
+}
+
+.border {
+  @media (max-width: 480px) {
+    margin-bottom: 24px;
+  }
+  @media (min-width: 481px) and (max-width: 580px) {
+    margin-bottom: 24px;
+  }
+  @media (min-width: 581px) and (max-width: 768px) {
+    margin-bottom: 24px;
+  }
+}

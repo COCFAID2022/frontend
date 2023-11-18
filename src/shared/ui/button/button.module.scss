@@ -1,93 +1,72 @@
 .button {
-  display: inline-flex;
-  gap: 4px;
+  display: flex;
   align-items: center;
-  border-radius: 60px;
-
-  &:hover {
-    .active-bg-to-light-blue {
-      background: var(--secondary2);
-    }
-    .active-bg-to-white {
-      background: var(--secondary3);
-    }
-    .active-bg-blue {
-      background: var(--activeButton);
-    }
-    .icon-light {
-      path {
-        stroke: var(--secondary3);
-      }
-    }
-    .icon-dark {
-      path {
-        stroke: var(--secondary3);
-      }
-    }
-  }
-}
-.text {
-  font-size: 16px;
-  line-height: 120%;
-  @media (max-width: 1219px) {
-    font-size: 14px;
-  }
-}
-.dark {
-  color: var(--secondary3);
-  background: var(--secondary1);
-}
-.transparent {
-  color: var(--primary1);
   background: none;
-  border: 1px solid var(--secondary1);
+  cursor: pointer;
 }
+.button.sm {
+  gap: 4px;
+  height: 40px;
+}
+.button.md {
+  gap: 8px;
+  height: 44px;
+}
+.button.lg {
+  gap: 8px;
+  height: 49px;
+}
+
+.outlined {
+  border-radius: 30px;
+  border: 1px solid var(--secondaryGreyColor1);
+}
+
+//Label
+.valueWithLabel {
+  display: flex;
+  flex-direction: column;
+  .label {
+    text-align: start;
+  }
+  .value {
+    padding: 0 10px 0 0;
+  }
+}
+
+//Icon
 .iconWrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 60px;
-  transition: all 0.3s;
 }
-.bg-blue {
-  background: var(--activeButton);
+.iconWrapper.sm {
+  width: 40px;
+  height: 40px;
 }
-.bg-lightBlue {
-  background: var(--secondary2);
+.iconWrapper.md,
+.iconWrapper.lg {
+  width: 44px;
+  height: 44px;
 }
-.bg-white {
-  background: var(--secondary3);
+
+.blue {
+  background-color: var(--primaryBlueColor2);
 }
-.smallIcon {
-  width: 35px;
-  height: 35px;
+.black {
+  background-color: var(--secondaryGreyColor1);
 }
-.mediumIcon {
-  width: 51px;
-  height: 51px;
+
+.blueColor {
+  color: var(--primaryBlueColor2);
 }
-.smallSpace {
-  padding: 8px 8px 8px 0;
+
+//Value
+.value.sm {
+  padding: 11.5px 8px 11.5px 0;
 }
-.mediumSpace {
-  padding: 16px 8px 16px 0;
-}
-.icon-light,
-.icon-dark {
-  path {
-    transition: all 0.3s ease-in-out;
-  }
-}
-.icon-light {
-  path {
-    stroke: var(--primary1);
-  }
-}
-.icon-dark {
-  path {
-    stroke: var(--secondary3);
-  }
-}
-.regular-shadow:hover {
-  box-shadow: 0 4px 10px 0 #2e3192;
+
+.value.md {
+  padding: 13px 13px 13px 0;
 }

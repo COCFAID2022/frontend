@@ -1,99 +1,71 @@
-.headerWrapper {
-  width: 100%;
-  background-color: var(--primary1);
-}
-// test
 .header {
-  padding: 21px 144px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  @media (max-width: 1355px) {
-    padding: 21px 65px;
+  padding-top: 31px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(81, 79, 79, 0.2);
+
+  @media (max-width: 768px) {
+    gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
-  @media (max-width: 1220px) {
-    padding: 10px 25px;
+  @media (min-width: 769px) {
+    gap: 10px;
+    padding-top: 20px;
+    padding-bottom: 10px;
   }
 }
-.nav {
+.logo {
+  width: 62px;
+  height: 71px;
+  margin-right: auto;
+  @media (max-width: 480px) {
+    width: 40px;
+    height: 46px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    width: 50px;
+    height: 56px;
+  }
+  @media (min-width: 993px) {
+    margin-right: 0;
+  }
+}
+.navigation {
   display: flex;
   align-items: center;
-  padding: 2px 4px;
-  gap: var(--base-spacing);
+  gap: 24px;
 
-  a {
-    position: relative;
-    display: inline-block;
-    padding: 8px 4px;
-    color: var(--secondary3);
-    font-size: 16px;
-    @media (max-width: 1219px) {
-      font-size: 14px;
-    }
-    font-weight: 600;
-    &::after {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      content: '';
-      width: 0;
-      height: 1px;
-      background: var(--secondary2);
-      transition: width 0.3s;
-    }
-    &:hover::after {
-      width: 100%;
-      transition: width 0.3s;
+  @media (max-width: 992px) {
+    display: none;
+  }
+  @media (min-width: 993px) and (max-width: 1080px) {
+    gap: 12px;
+    .link {
+      h7 {
+        font-size: 12px;
+      }
     }
   }
 }
 
-.actions {
-  display: flex;
-  align-items: center;
-  gap: var(--xs-spacing);
-
-  .tel {
-    position: relative;
-    display: inline-block;
-    padding: 8px 4px;
-    color: var(--secondary3);
-    font-size: 16px;
-    @media (max-width: 1219px) {
-      font-size: 14px;
-    }
-    font-weight: 600;
-    &:first-child::after {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      content: '';
-      width: 0;
-      height: 1px;
-      background: var(--secondary2);
-      transition: width 0.3s;
-    }
-    &:first-child:hover::after {
-      width: 100%;
-      transition: width 0.3s;
-    }
+.buttonTel {
+  display: none;
+  @media (min-width: 565px) {
+    display: flex;
   }
 }
-.accountImage svg path {
-  transition: all ease-in-out 0.3s;
-}
-
-.accountImage:hover {
-  svg path {
-    stroke: var(--secondary2);
+.buttonSupport {
+  @media (max-width: 374px) {
+    display: none;
   }
 }
 
-@media (min-width: 1025px) and (max-width: 1440px) {
-}
-@media (min-width: 769px) and (max-width: 1024px) {
-}
-@media (min-width: 376px) and (max-width: 768px) {
-}
-@media (max-width: 375px) {
+.burger {
+  display: none;
+  @media (max-width: 992px) {
+    display: block;
+  }
 }

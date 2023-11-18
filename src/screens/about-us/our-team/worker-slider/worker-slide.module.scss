@@ -1,0 +1,66 @@
+.slide {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+  border-radius: 6px;
+  border: 1.5px solid var(--secondaryGreyColor1);
+  padding: 30px;
+
+  @media (min-width: 321px) and (max-width: 480px) {
+    padding: 13px 8.5px;
+    gap: 16px;
+  }
+  @media (min-width: 581px) and (max-width: 630px) {
+    gap: 5px;
+    padding: 10px 20px;
+  }
+  @media (min-width: 631px) and (max-width: 768px) {
+    padding: 15px;
+    gap: 10px;
+  }
+  @media (min-width: 769px) and (max-width: 992px) {
+    padding: 25px;
+    gap: 10px;
+  }
+}
+.image {
+  width: 250px;
+  height: 193px;
+  @media (min-width: 321px) and (max-width: 480px) {
+    width: 148px;
+    height: 115px;
+  }
+  @media (min-width: 481px) and (max-width: 580px) {
+    width: 148px;
+    height: 115px;
+  }
+  @media (min-width: 581px) and (max-width: 630px) {
+    width: 148px;
+    height: 80px;
+  }
+  @media (min-width: 631px) and (max-width: 768px) {
+    width: 148px;
+    height: 115px;
+  }
+  @media (min-width: 769px) and (max-width: 992px) {
+    width: 148px;
+    height: 115px;
+  }
+}
+.title {
+  @media (min-width: 581px) and (max-width: 768px) {
+    font-size: 14px !important;
+    text-align: center;
+  }
+  @media (min-width: 631px) and (max-width: 768px) {
+    white-space: nowrap;
+  }
+}
+.subtitle {
+  font-size: 12px !important;
+  text-align: center;
+  @media (min-width: 631px) and (max-width: 768px) {
+    white-space: nowrap;
+  }
+}

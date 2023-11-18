@@ -1,0 +1,74 @@
+.hero {
+  position: relative;
+  margin-bottom: 64px;
+}
+.uaMap {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  object-fit: contain;
+
+  @media (max-width: 768px) {
+    top: -3%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @media (max-width: 480px) {
+    top: 0;
+    width: 335.255px;
+    height: 227.008px;
+  }
+}
+
+.title {
+  padding-top: 154px;
+  margin-bottom: 70px;
+  text-align: center;
+  color: var(--primaryBlueColor1);
+  span {
+    color: var(--defaultWhite);
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    max-width: 400px;
+    width: 100%;
+    padding-top: 152px;
+    font-size: 33px !important;
+    margin: 0 auto;
+    height: 454px;
+  }
+  @media (min-width: 769px) and (max-width: 855px) {
+    font-size: 40px !important;
+  }
+  @media (max-width: 480px) {
+    max-width: 304px;
+    width: 100%;
+    font-size: 22px !important;
+    padding-top: 79px;
+    height: 227px;
+    margin: 0 auto 20px;
+  }
+}
+
+.info {
+  max-width: 620px;
+  width: 100%;
+
+  .description {
+    margin-bottom: 32px;
+    color: var(--primaryBlueColor1);
+    @media (max-width: 480px) {
+      font-size: 16px !important;
+    }
+  }
+}
+
+.actions {
+  display: flex;
+  gap: 38px;
+  @media (max-width: 480px) {
+    align-items: start;
+    flex-direction: column;
+    gap: 24px;
+  }
+}

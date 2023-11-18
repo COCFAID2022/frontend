@@ -3,19 +3,24 @@
 @import 'variables';
 
 * {
-  font-family: 'Montserrat Alternates', sans-serif;
+  font-family: var(--font-Montserrat_Alternates);
   font-weight: 400;
 }
 html,
 body {
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
 }
 
 .container {
-  max-width: 1440px;
+  max-width: 1080px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 15px;
+  @media (max-width: 320px) {
+    padding: 0 10px;
+  }
 }
 
 main {
@@ -25,4 +30,8 @@ main {
 .layout-css {
   display: flex;
   flex-direction: column;
+}
+
+button {
+  background: none;
 }
