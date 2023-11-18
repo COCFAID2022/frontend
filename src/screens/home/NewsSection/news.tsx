@@ -1,6 +1,7 @@
-import MainStyle from '../StyleHelpPage.module.scss';
 import React from 'react';
+
 import style from '../NewsSection/News.module.scss';
+import MainStyle from '../StyleHelpPage.module.scss';
 import NewsLoop from './NewsLoop'; 
 
 const News: React.FC = () => {

@@ -1,6 +1,7 @@
-import styles from './section-title.module.scss';
-import { FC, PropsWithChildren } from 'react';
 import classNames from 'classnames';
+import { FC, PropsWithChildren } from 'react';
+
+import styles from './section-title.module.scss';
 
 interface SectionTitleProps extends PropsWithChildren {
   variant: 'light' | 'dark';

@@ -1,8 +1,9 @@
 import React, { FC } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+
 import { sliderItems } from '../data/sliderItems';
-import { Slide } from './slide/slide';
 import styles from './side-slide.module.scss';
+import { Slide } from './slide/slide';
 
 interface SideSlideProps {
   onClickHandler: any;

@@ -1,5 +1,5 @@
-import MainStyle from '../StyleHelpPage.module.scss';
 import style from '../HelpSection/Help.module.scss';
+import MainStyle from '../StyleHelpPage.module.scss';
 // import script from '../ScriptPageHelp.module'
 export const Help = () => {
     return(

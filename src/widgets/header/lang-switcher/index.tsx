@@ -1,4 +1,5 @@
 import { Typography } from '@/shared/ui/typography';
+
 import styles from './lang-switcher.module.scss';
 export const LangSwitcher = () => {
   return (

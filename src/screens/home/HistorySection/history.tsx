@@ -1,5 +1,5 @@
-import MainStyle from '../StyleHelpPage.module.scss';
 import style from '../HistorySection/History.module.scss';
+import MainStyle from '../StyleHelpPage.module.scss';
 
 export const History = () => {
     return(

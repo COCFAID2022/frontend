@@ -1,7 +1,8 @@
-import MainStyle from '../StyleHelpPage.module.scss';
-import style from '../Navbar/Navbar.module.scss';
-import Logo from '../image/logo-navbar.png';
 import Image from 'next/image';
+
+import Logo from '../image/logo-navbar.png';
+import style from '../Navbar/Navbar.module.scss';
+import MainStyle from '../StyleHelpPage.module.scss';
 export const Navbar = () => {
     return(
          <nav className={style.nav}>

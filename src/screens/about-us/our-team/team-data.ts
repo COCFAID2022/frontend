@@ -1,5 +1,6 @@
-import photo from '@/shared/assets/img/stub_photo.png';
 import { StaticImageData } from 'next/image';
+
+import photo from '@/shared/assets/img/stub_photo.png';
 
 export type TypeWorker = {
   id: number;

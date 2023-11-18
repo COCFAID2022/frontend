@@ -1,13 +1,15 @@
 'use client';
-import { FC } from 'react';
 import classNames from 'classnames';
-import styles from './button.module.scss';
 import Image from 'next/image';
-import { Typography } from '@/shared/ui/typography';
+import { FC } from 'react';
+
 import {
   TypeHtmlFontWeight,
   TypeHtmlHeading,
 } from '@/shared/app/types/htmlElements';
+import { Typography } from '@/shared/ui/typography';
+
+import styles from './button.module.scss';
 
 interface ButtonProps {
   buttonType?: 'button' | 'submit';

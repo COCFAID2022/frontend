@@ -1,8 +1,10 @@
-import styles from './slider-navigation-buttons.module.scss';
 import Image from 'next/image';
+import { FC } from 'react';
+
 import sliderLeft from '@/shared/assets/icons/slider-left.svg';
 import sliderRight from '@/shared/assets/icons/slider-right.svg';
-import { FC } from 'react';
+
+import styles from './slider-navigation-buttons.module.scss';
 
 interface SliderNavigationButtonsProps {
   onClickPrevSlide: () => void;

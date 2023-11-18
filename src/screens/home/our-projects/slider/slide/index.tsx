@@ -1,8 +1,10 @@
-import styles from './slide.module.scss';
-import { Button } from '@/shared/ui/button';
-import { FC } from 'react';
-import Image from 'next/image';
 import classNames from 'classnames';
+import Image from 'next/image';
+import { FC } from 'react';
+
+import { Button } from '@/shared/ui/button';
+
+import styles from './slide.module.scss';
 
 interface SlideProps {
   slideData: any;

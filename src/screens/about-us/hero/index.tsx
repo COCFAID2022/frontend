@@ -1,10 +1,12 @@
-import UaMap from '@/shared/assets/img/ua_map.png';
-import styles from './hero.module.scss';
-import Image from 'next/image';
-import { Typography } from '@/shared/ui/typography';
-import { Button } from '@/shared/ui/button';
-import buttonIconLight from '@/shared/assets/icons/arrowTopRightLight.svg';
 import classNames from 'classnames';
+import Image from 'next/image';
+
+import buttonIconLight from '@/shared/assets/icons/arrowTopRightLight.svg';
+import UaMap from '@/shared/assets/img/ua_map.png';
+import { Button } from '@/shared/ui/button';
+import { Typography } from '@/shared/ui/typography';
+
+import styles from './hero.module.scss';
 
 export const Hero = () => {
   return (

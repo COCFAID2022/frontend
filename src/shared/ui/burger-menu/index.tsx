@@ -1,8 +1,9 @@
 'use client';
-import styles from './burger.module.scss';
 import classNames from 'classnames';
-import { useState } from 'react';
 import Link from 'next/link';
+import { useState } from 'react';
+
+import styles from './burger.module.scss';
 
 export const BurgerMenu = () => {
   const [open, setOpen] = useState(false);

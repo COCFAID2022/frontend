@@ -1,8 +1,10 @@
+import classNames from 'classnames';
 import Image from 'next/image';
+
 import logoHeart from '@/shared/assets/img/hero_heart.png';
 import { Typography } from '@/shared/ui/typography';
+
 import styles from './hero.module.scss';
-import classNames from 'classnames';
 export const Hero = () => {
   return (
     <section className={classNames(styles.hero, 'container')}>

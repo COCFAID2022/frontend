@@ -1,5 +1,5 @@
-import MainStyle from '../StyleHelpPage.module.scss';
 import style from '../ProjectsSection/Projects.module.scss';
+import MainStyle from '../StyleHelpPage.module.scss';
 export const Projects = () => {
     return(
         <section className={`${style['block-project']} ${style['block-project']}`}id="block-hepl">

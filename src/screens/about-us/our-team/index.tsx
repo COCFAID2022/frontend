@@ -1,9 +1,11 @@
-import { Typography } from '@/shared/ui/typography';
+import classNames from 'classnames';
+
+import { Department } from '@/screens/about-us/our-team/department/department';
 import { Border } from '@/shared/ui/border';
+import { Typography } from '@/shared/ui/typography';
+
 import styles from './our-team.module.scss';
 import { teamData } from './team-data';
-import { Department } from '@/screens/about-us/our-team/department/department';
-import classNames from 'classnames';
 export const OurTeam = () => {
   return (
     <section className={classNames(styles.ourTeam, 'container')}>

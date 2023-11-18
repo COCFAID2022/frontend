@@ -1,12 +1,14 @@
 'use client';
+import { yupResolver } from '@hookform/resolvers/yup';
 import classNames from 'classnames';
-import { Button } from '@/shared/ui/button';
+import { SubmitHandler,useForm } from 'react-hook-form';
+
 import arrowRightLight from '@/shared/assets/icons/arrowTopRightLight.svg';
-import { useForm, SubmitHandler } from 'react-hook-form';
+import { Button } from '@/shared/ui/button';
+import { Typography } from '@/shared/ui/typography';
+
 import styles from './form-info.module.scss';
 import { schema, TypeSchema } from './form-schema';
-import { yupResolver } from '@hookform/resolvers/yup';
-import { Typography } from '@/shared/ui/typography';
 
 export const FormInfo = () => {
   const {

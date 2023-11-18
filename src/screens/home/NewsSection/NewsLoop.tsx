@@ -1,8 +1,9 @@
-import React from 'react';
-import MainStyle from '../StyleHelpPage.module.scss';
-import style from '../NewsSection/News.module.scss';
-import BlueArrow from '../image/arrow-blue.png';
 import Image from 'next/image';
+import React from 'react';
+
+import BlueArrow from '../image/arrow-blue.png';
+import style from '../NewsSection/News.module.scss';
+import MainStyle from '../StyleHelpPage.module.scss';
 
 
 interface NewsItem {

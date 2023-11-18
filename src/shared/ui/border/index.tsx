@@ -1,5 +1,6 @@
-import styles from './border.module.scss';
 import classNames from 'classnames';
+
+import styles from './border.module.scss';
 
 export const Border = (props: { className?: string }) => {
   const { className = '' } = props;

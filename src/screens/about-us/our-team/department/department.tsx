@@ -1,6 +1,8 @@
+import { FC } from 'react';
+
 import { TeamSlider } from '@/screens/about-us/our-team/team-slider/team-slider';
 import { Typography } from '@/shared/ui/typography';
-import { FC } from 'react';
+
 import { TypeTeamData } from '../team-data';
 import styles from './department.module.scss';
 

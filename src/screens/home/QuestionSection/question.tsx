@@ -1,5 +1,5 @@
-import MainStyle from '../StyleHelpPage.module.scss';
 import style from '../QuestionSection/Question.module.scss';
+import MainStyle from '../StyleHelpPage.module.scss';
 export const Question = () => {
     return(
         <section className={`${style['block-news']} ${style['block-question']}`}id="block-hepl">

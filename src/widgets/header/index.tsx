@@ -1,14 +1,16 @@
+import classNames from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Button } from '@/shared/ui/button';
-import { LangSwitcher } from '@/widgets/header/lang-switcher';
-import headerLogo from '@/shared/assets/img/header_logo-blue.png';
-import phoneIcon from '@/shared/assets/icons/phone.svg';
+
 import arrowTopRightLight from '@/shared/assets/icons/arrowTopRightLight.svg';
-import styles from './header.module.scss';
-import classNames from 'classnames';
-import { Typography } from '@/shared/ui/typography';
+import phoneIcon from '@/shared/assets/icons/phone.svg';
 import burgerIcon from '@/shared/assets/img/burger-menu.png';
+import headerLogo from '@/shared/assets/img/header_logo-blue.png';
+import { Button } from '@/shared/ui/button';
+import { Typography } from '@/shared/ui/typography';
+import { LangSwitcher } from '@/widgets/header/lang-switcher';
+
+import styles from './header.module.scss';
 
 export const Header = () => {
   return (

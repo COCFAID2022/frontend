@@ -1,9 +1,11 @@
-import { Typography } from '@/shared/ui/typography';
-import styles from './founder.module.scss';
+import classNames from 'classnames';
 import Image from 'next/image';
+
 import stubPhoto from '@/shared/assets/img/stub_photo.png';
 import { Border } from '@/shared/ui/border';
-import classNames from 'classnames';
+import { Typography } from '@/shared/ui/typography';
+
+import styles from './founder.module.scss';
 export const Founder = () => {
   return (
     <section className={'container'}>

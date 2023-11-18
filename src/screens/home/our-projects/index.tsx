@@ -1,7 +1,7 @@
-import styles from './our-projects.module.scss';
-
-import { SectionTitle } from '@/shared/ui/section-title';
 import { Slider } from '@/screens/home/our-projects/slider/slider';
+import { SectionTitle } from '@/shared/ui/section-title';
+
+import styles from './our-projects.module.scss';
 
 export const OurProjects = () => {
   return (

@@ -1,5 +1,6 @@
-import { FC } from 'react';
 import Image from 'next/image';
+import { FC } from 'react';
+
 import styles from './slide.module.scss';
 
 interface SlideProps {

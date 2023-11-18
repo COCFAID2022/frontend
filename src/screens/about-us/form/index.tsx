@@ -1,8 +1,10 @@
-import styles from './form.module.scss';
-import { Typography } from '@/shared/ui/typography';
 import Image from 'next/image';
-import ua_map from '@/shared/assets/img/ua_map.png';
+
 import { FormInfo } from '@/screens/about-us/form/form-info';
+import ua_map from '@/shared/assets/img/ua_map.png';
+import { Typography } from '@/shared/ui/typography';
+
+import styles from './form.module.scss';
 
 export const Form = () => {
   return (

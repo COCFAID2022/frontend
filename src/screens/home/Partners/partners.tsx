@@ -1,10 +1,11 @@
-import MainStyle from '../StyleHelpPage.module.scss';
-import style from '../Partners/Partners.module.scss';
+import Image from 'next/image';
+
 import ArrowLeft from '../image/arrow-left.png';
 import ArrowRight from '../image/arrow-right.png';
-import SliderPoster from '../image/poster-slider.png';
 import PrivatBankPoster from '../image/poster-privatbank.png';
-import Image from 'next/image';
+import SliderPoster from '../image/poster-slider.png';
+import style from '../Partners/Partners.module.scss';
+import MainStyle from '../StyleHelpPage.module.scss';
 export const Partners = () => {
     return(
         <section className={`${style.partners} ${MainStyle.flex}`}>

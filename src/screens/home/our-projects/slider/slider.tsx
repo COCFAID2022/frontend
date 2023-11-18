@@ -1,15 +1,17 @@
 'use client';
-import React, { useRef } from 'react';
-import { Swiper, SwiperRef, SwiperSlide } from 'swiper/react';
-import { Swiper as SwiperType } from 'swiper/types';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import styles from './slider.module.scss';
+
+import React, { useRef } from 'react';
+import { Swiper, SwiperRef, SwiperSlide } from 'swiper/react';
+import { Swiper as SwiperType } from 'swiper/types';
+
 import { sliderItems } from './data/sliderItems';
-import { Slide } from './slide';
-import { SideSlide } from './side-slide';
 import { NavigationButtons } from './navigation-buttons/navigation-buttons';
+import { SideSlide } from './side-slide';
+import { Slide } from './slide';
+import styles from './slider.module.scss';
 
 export const Slider = () => {
   const mainSliderRef = useRef<SwiperRef>(null);
