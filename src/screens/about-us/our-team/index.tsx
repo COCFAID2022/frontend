@@ -13,7 +13,8 @@ export const OurTeam = () => {
         className={styles.title}>
         Наша команда
       </Typography>
-      <Border />
+
+      <Border className={styles.border} />
 
       {teamData.map(({ workers, description, department }) => {
         return (
