@@ -1,6 +1,6 @@
 import { Help } from "./HelpSection/help";
 import { History } from "./HistorySection/history";
-import { News } from "./NewsSection/news";
+import News from './NewsSection/news'
 import { Partners } from "./Partners/partners";
 import { Projects } from "./ProjectsSection/projects";
 import { Question } from "./QuestionSection/question";
@@ -12,11 +12,11 @@ export const HomeScreen = () => {
     <Navbar/>
     <Header/>
     <Partners/>
-   <Help/>
-   <History/>
-   <Projects/>
-   <News/>
-   <Question/>
+    <Help/>
+    <History/>
+    <Projects/>
+    <News/>
+    <Question/>
     </>
   );
 };

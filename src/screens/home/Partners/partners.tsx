@@ -1,34 +1,39 @@
 import MainStyle from '../StyleHelpPage.module.scss';
 import style from '../Partners/Partners.module.scss';
+import ArrowLeft from '../image/arrow-left.png';
+import ArrowRight from '../image/arrow-right.png';
+import SliderPoster from '../image/poster-slider.png';
+import PrivatBankPoster from '../image/poster-privatbank.png';
+import Image from 'next/image';
 export const Partners = () => {
     return(
         <section className={`${style.partners} ${MainStyle.flex}`}>
         <div className={`${style['partners-items']} ${MainStyle.flex}`}>
             <h4 className={style['partners-items__title']}>Партнери</h4>
             <div className={`${style['btn-block']} ${MainStyle.flex}`}>
-                <img src="/image/arrow-left.png" alt=""/>
-                <img src="/image/arrow-right.png" alt=""/>
+                <Image src={ArrowLeft} priority={true} alt={'arrowLeft'} className='' />
+                <Image src={ArrowRight} priority={true} alt={'arrowLeft'} className='' />
             </div>
         </div>
         <div className={`${style['partners-slider']} ${style.swiper} ${MainStyle.flex}`}>
             <div className={`${style["swiper-container"]} ${MainStyle.flex}`}>
                 <div className={style["swiper-slide"]}>
-                    <img className={style["swiper-slide__poster"]} src="/image/poster-privatbank.png" alt=""/>
+                <Image src={PrivatBankPoster} priority={true} alt={'poster'} className='swiper-slide__poster'/>
                 </div>
                 <div className={style["swiper-slide"]}>
-                    <img className={style["swiper-slide__poster"]} src="/image/poster-slider.png" alt=""/>
+                    <Image src={SliderPoster} priority={true} alt={'poster'} className='swiper-slide__poster'/>
                 </div>
                 <div className={style["swiper-slide"]}>
-                    <img className={style["swiper-slide__poster"]} src="/image/poster-slider.png" alt=""/>
+                    <Image src={SliderPoster} priority={true} alt={'poster'} className='swiper-slide__poster'/>
                 </div>
                 <div className={style["swiper-slide"]}>
-                    <img className={style["swiper-slide__poster"]} src="/image/poster-slider.png" alt=""/>
+                    <Image src={SliderPoster} priority={true} alt={'poster'} className='swiper-slide__poster'/>
                 </div>
                 <div className={style["swiper-slide"]}>
-                    <img className={style["swiper-slide__poster"]} src="/image/poster-slider.png" alt=""/>
+                    <Image src={SliderPoster} priority={true} alt={'poster'} className='swiper-slide__poster'/>
                 </div>
                 <div className={style["swiper-slide"]}>
-                    <img className={style["swiper-slide__poster"]} src="/image/poster-slider.png" alt=""/>
+                    <Image src={SliderPoster} priority={true} alt={'poster'} className='swiper-slide__poster'/>
                 </div>
             </div>
         </div>

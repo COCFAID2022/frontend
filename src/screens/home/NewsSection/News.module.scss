@@ -1,5 +1,5 @@
 .block-news-cards-items {
-    width: 344px;
+    flex-basis: calc(29.33% - 8px);
     display: flex;
     flex-direction: column;
     row-gap: 16px;
@@ -38,4 +38,9 @@
   
   .block-news {
     margin-top: 32px;
+  }
+  .block-news-cards{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 24px 16px;
   }
