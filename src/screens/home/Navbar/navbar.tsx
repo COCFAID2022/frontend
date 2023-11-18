@@ -1,4 +1,5 @@
-import style from '../StyleHelpPage.module.scss';
+import MainStyle from '../StyleHelpPage.module.scss';
+import style from '../Navbar/Navbar.module.scss';
 export const Navbar = () => {
     return(
          <nav className={style.nav}>

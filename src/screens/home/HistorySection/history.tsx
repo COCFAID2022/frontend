@@ -1,5 +1,6 @@
-import style from '../StyleHelpPage.module.scss';
-// import script from '../ScriptPageHelp.module'
+import MainStyle from '../StyleHelpPage.module.scss';
+import style from '../HistorySection/History.module.scss';
+
 export const History = () => {
     return(
         <section className={style['block-history']}id="block-hepl">
@@ -8,7 +9,6 @@ export const History = () => {
                 <p className={style["block-help-header__sibtitle"]}>Активні напрямки допомоги</p>
             </div>
             <hr/>
-            
         </section>
     )
 }

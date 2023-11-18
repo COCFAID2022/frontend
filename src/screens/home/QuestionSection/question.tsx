@@ -1,4 +1,5 @@
-import style from '../StyleHelpPage.module.scss';
+import MainStyle from '../StyleHelpPage.module.scss';
+import style from '../QuestionSection/Question.module.scss';
 export const Question = () => {
     return(
         <section className={`${style['block-news']} ${style['block-question']}`}id="block-hepl">
@@ -7,7 +8,7 @@ export const Question = () => {
                 <p className={style["block-help-header__sibtitle"]}>Активні напрямки допомоги</p>
             </div>
             <hr/>
-            <div className={`${style['block-help-cards']} ${style.flex}`} id="block-news-cards"></div>
+            <div className={`${style['block-help-cards']} ${MainStyle.flex}`} id="block-news-cards"></div>
         </section>
     )
 }
