@@ -26,7 +26,7 @@ export const FormInfo = () => {
     <form
       className={styles.form_info}
       onSubmit={handleSubmit(submitFormHandler)}>
-      <div>
+      <div className={styles.inputWrapper}>
         <input
           className={styles.input}
           {...register('fullName')}
@@ -41,7 +41,7 @@ export const FormInfo = () => {
           </Typography>
         )}
       </div>
-      <div>
+      <div className={styles.inputWrapper}>
         <input
           className={styles.input}
           {...register('email')}
@@ -57,7 +57,7 @@ export const FormInfo = () => {
           </Typography>
         )}
       </div>
-      <div>
+      <div className={styles.inputWrapper}>
         <input
           className={styles.input}
           {...register('nationality')}
@@ -73,7 +73,7 @@ export const FormInfo = () => {
           </Typography>
         )}
       </div>
-      <div>
+      <div className={styles.inputWrapper}>
         <textarea
           {...register('description')}
           className={classNames(styles.input, styles.textarea)}

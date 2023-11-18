@@ -3,6 +3,7 @@ import styles from './founder.module.scss';
 import Image from 'next/image';
 import stubPhoto from '@/shared/assets/img/stub_photo.png';
 import { Border } from '@/shared/ui/border';
+import classNames from 'classnames';
 export const Founder = () => {
   return (
     <section className={'container'}>
@@ -18,13 +19,16 @@ export const Founder = () => {
         className={styles.subtitle}>
         благодійного фонду
       </Typography>
-      <Border />
+      <Border className={styles.border} />
       <div className={styles.info}>
         <div className={styles.imageWrapper}>
           <Image src={stubPhoto} alt={'founder image'} />
         </div>
         <div className={styles.textWrapper}>
-          <Typography fontWeight={'semiBold'} element={'h5'}>
+          <Typography
+            fontWeight={'semiBold'}
+            element={'h5'}
+            className={styles.fullName}>
             Ім&apos;я та прізвище
           </Typography>
           <Typography fontWeight={'regular'} type={'body'} element={'h6'}>
