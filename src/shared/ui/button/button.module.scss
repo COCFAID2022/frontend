@@ -1,28 +1,33 @@
 .button {
   display: flex;
   align-items: center;
-  background: none;
+
   cursor: pointer;
+
+  background: none;
 }
 
 .button.sm {
   gap: 4px;
+
   height: 40px;
 }
 
 .button.md {
   gap: 8px;
+
   height: 44px;
 }
 
 .button.lg {
   gap: 8px;
+
   height: 49px;
 }
 
 .outlined {
-  border-radius: 30px;
   border: 1px solid var(--secondaryGreyColor1);
+  border-radius: 30px;
 }
 
 .valueWithLabel {
@@ -42,6 +47,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
   border-radius: 60px;
 }
 

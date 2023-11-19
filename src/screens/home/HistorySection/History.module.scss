@@ -1,5 +1,6 @@
 .blockHistoryCards {
   flex-wrap: wrap;
+
   margin-top: 32px;
 }
 
@@ -19,31 +20,36 @@
   }
 
   &__line {
-    border-radius: 6px;
-    opacity: 1;
-    background: #d4d1d1;
+    position: relative;
+
     width: 100%;
     height: 5px;
-    position: relative;
+
+    opacity: 1;
+    border-radius: 6px;
+    background: #D4D1D1;
 
     &::before {
       position: absolute;
-      content: '';
       top: 0;
       left: 0;
+
       width: 50%;
       height: 5px;
+
+      content: '';
+
       opacity: 1;
       border-radius: 6px;
-      background: #251add;
+      background: #251ADD;
     }
   }
 
   &-count {
     &__item {
       font-size: 16px;
-      font-style: normal;
       font-weight: 400;
+      font-style: normal;
       line-height: 19.2px;
     }
   }

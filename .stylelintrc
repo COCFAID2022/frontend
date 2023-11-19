@@ -1,9 +1,20 @@
 {
-  "extends": ["stylelint-config-standard-scss", "stylelint-config-prettier-scss"],
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-prettier",
+    "stylelint-prettier/recommended",
+    "stylelint-order-config-standard"
+  ],
+  "plugins": [
+    "stylelint-prettier",
+    "stylelint-order"
+  ],
   "rules": {
-
+    "color-hex-case": "upper",
     "custom-property-pattern": "^[a-zA-Z][a-zA-Z0-9]*$",
     "selector-class-pattern": "^[a-zA-Z][a-zA-Z0-9]*$",
-
+    "prettier/prettier": true
   }
 }
+
+

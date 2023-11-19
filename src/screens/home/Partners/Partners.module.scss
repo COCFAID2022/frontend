@@ -2,6 +2,7 @@
 .partners {
   flex-direction: column;
   row-gap: 16px;
+
   margin-bottom: 64px;
 
   &-items {
@@ -14,10 +15,11 @@
   }
 
   &-items__title {
-    color: #2c2c2c;
+    color: #2C2C2C;
+
     font-size: 20px;
-    font-style: normal;
     font-weight: 600;
+    font-style: normal;
     line-height: normal;
   }
 
@@ -34,8 +36,9 @@
   }
 
   .swiperSlide {
-    border: 1px solid #514f4f;
     padding: 24px 34px;
+
+    border: 1px solid #514F4F;
 
     &__poster {
       // стили для .swiper-slide__poster

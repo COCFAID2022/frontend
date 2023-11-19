@@ -3,19 +3,22 @@
   flex-direction: column-reverse;
 
   @media (width <= 320px) {
+    width: 100%;
     max-width: 320px;
-    width: 100%;
   }
+
   @media (width <= 480px) {
+    width: 100%;
     max-width: 480px;
-    width: 100%;
   }
+
   @media (width >= 481px) and (width <= 580px) {
+    width: 100%;
     max-width: 580px;
-    width: 100%;
   }
+
   @media (width >= 581px) and (width <= 768px) {
-    max-width: 768px;
     width: 100%;
+    max-width: 768px;
   }
 }

@@ -2,23 +2,29 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 24px;
-  border-radius: 6px;
-  border: 1.5px solid var(--secondaryGreyColor1);
+
   padding: 30px;
+
+  border: 1.5px solid var(--secondaryGreyColor1);
+  border-radius: 6px;
+  gap: 24px;
 
   @media (width >= 321px) and (width <= 480px) {
     padding: 13px 8.5px;
     gap: 16px;
   }
+
   @media (width >= 581px) and (width <= 630px) {
     gap: 5px;
+
     padding: 10px 20px;
   }
+
   @media (width >= 631px) and (width <= 768px) {
     padding: 15px;
     gap: 10px;
   }
+
   @media (width >= 769px) and (width <= 992px) {
     padding: 25px;
     gap: 10px;
@@ -28,22 +34,27 @@
 .image {
   width: 250px;
   height: 193px;
+
   @media (width >= 321px) and (width <= 480px) {
     width: 148px;
     height: 115px;
   }
+
   @media (width >= 481px) and (width <= 580px) {
     width: 148px;
     height: 115px;
   }
+
   @media (width >= 581px) and (width <= 630px) {
     width: 148px;
     height: 80px;
   }
+
   @media (width >= 631px) and (width <= 768px) {
     width: 148px;
     height: 115px;
   }
+
   @media (width >= 769px) and (width <= 992px) {
     width: 148px;
     height: 115px;
@@ -52,17 +63,21 @@
 
 .title {
   @media (width >= 581px) and (width <= 768px) {
-    font-size: 14px !important;
     text-align: center;
+
+    font-size: 14px !important;
   }
+
   @media (width >= 631px) and (width <= 768px) {
     white-space: nowrap;
   }
 }
 
 .subtitle {
-  font-size: 12px !important;
   text-align: center;
+
+  font-size: 12px !important;
+
   @media (width >= 631px) and (width <= 768px) {
     white-space: nowrap;
   }
