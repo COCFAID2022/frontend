@@ -2,13 +2,13 @@
   "extends": [
     "next/core-web-vitals",
     "airbnb",
-    "plugin:prettier/recommended",
     "airbnb/hooks",
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
-    "plugin:jsx-a11y/recommended"
+    "plugin:jsx-a11y/recommended",
+    "plugin:prettier/recommended"
   ],
-  "plugins": ["simple-import-sort"],
+  "plugins": ["simple-import-sort", "prettier"],
   "rules": {
     "import/extensions": [
       "error",
