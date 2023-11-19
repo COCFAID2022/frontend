@@ -26,7 +26,7 @@ export const FormInfo = () => {
 
   return (
     <form
-      className={styles.form_info}
+      className={styles.formInfo}
       onSubmit={handleSubmit(submitFormHandler)}>
       <div className={styles.inputWrapper}>
         <input

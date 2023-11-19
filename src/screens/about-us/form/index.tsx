@@ -27,7 +27,7 @@ export const Form = () => (
           <Typography
             fontWeight={'bold'}
             element={'h3'}
-            className={styles.ua_title}>
+            className={styles.uaTitle}>
             Ми працюємо <span>по всій Україні</span>
           </Typography>
         </div>

@@ -1,28 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600&family=Noto+Sans+Kawi:wght@500&family=Roboto:wght@100;400&display=swap');
-// Объявляем миксин для стилей сброса
+@import 'https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600&family=Noto+Sans+Kawi:wght@500&family=Roboto:wght@100;400&display=swap';
+
 @mixin reset-styles {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat Alternates', sans-serif;
-    color: black;
-  }
-  
-  .my-reset {
-    @include reset-styles;
-  }
-  
-  .flex {
-    display: flex;
-  }
-  
-  .page-wrapper, .container {
-    padding: 0 180px;
-  }
-  
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat Alternates', sans-serif;
+  color: black;
+}
 
-  
+.myReset {
+  @include reset-styles;
+}
 
- 
-  
+.flex {
+  display: flex;
+}
+
+.pageWrapper,
+.container {
+  padding: 0 180px;
+}
