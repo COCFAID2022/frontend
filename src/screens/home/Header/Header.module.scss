@@ -1,34 +1,39 @@
 .header {
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 
   &-info {
-    width: 530px;
     flex-direction: column;
+
+    width: 530px;
     row-gap: 16px;
 
     &__title {
       text-transform: uppercase;
+
       color: #039cfd;
+
       font-size: 52px;
-      font-style: normal;
       font-weight: 700;
+      font-style: normal;
       line-height: normal;
     }
 
     &__subtitle {
       color: #039cfd;
+
       font-size: 32px;
-      font-style: normal;
       font-weight: 400;
+      font-style: normal;
       line-height: normal;
     }
 
     &__description {
       color: #2c2c2c;
+
       font-size: 20px;
-      font-style: normal;
       font-weight: 400;
+      font-style: normal;
       line-height: 36px;
     }
   }

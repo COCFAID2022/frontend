@@ -2,17 +2,22 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   padding-top: 31px;
   padding-bottom: 10px;
+
   border-bottom: 2px solid rgb(81 79 79 / 20%);
 
   @media (width <= 768px) {
     gap: 10px;
+
     padding-top: 10px;
     padding-bottom: 10px;
   }
+
   @media (width >= 769px) {
     gap: 10px;
+
     padding-top: 20px;
     padding-bottom: 10px;
   }
@@ -22,14 +27,17 @@
   width: 62px;
   height: 71px;
   margin-right: auto;
+
   @media (width <= 480px) {
     width: 40px;
     height: 46px;
   }
+
   @media (width >= 481px) and (width <= 768px) {
     width: 50px;
     height: 56px;
   }
+
   @media (width >= 993px) {
     margin-right: 0;
   }
@@ -43,6 +51,7 @@
   @media (width <= 992px) {
     display: none;
   }
+
   @media (width >= 993px) and (width <= 1080px) {
     gap: 12px;
 
@@ -54,6 +63,7 @@
 
 .buttonTel {
   display: none;
+
   @media (width >= 565px) {
     display: flex;
   }
@@ -67,6 +77,7 @@
 
 .burger {
   display: none;
+
   @media (width <= 992px) {
     display: block;
   }

@@ -9,9 +9,11 @@
 }
 
 .decore {
-  content: '';
   width: 15px;
   height: 1px;
+
+  content: '';
   transform: rotate(90deg);
+
   background-color: var(--secondaryGreyColor1);
 }

@@ -1,11 +1,12 @@
 .hero {
   position: relative;
+
   margin-bottom: 64px;
 }
 
 .uaMap {
-  z-index: -1;
   position: absolute;
+  z-index: -1;
   top: 0;
   right: 0;
   object-fit: contain;
@@ -13,52 +14,64 @@
   @media (width <= 768px) {
     top: -3%;
     left: 50%;
+
     transform: translateX(-50%);
   }
+
   @media (width <= 480px) {
     top: 0;
+
     width: 335.255px;
     height: 227.008px;
   }
 }
 
 .title {
-  padding-top: 154px;
   margin-bottom: 70px;
+  padding-top: 154px;
+
   text-align: center;
+
   color: var(--primaryBlueColor1);
 
   span {
     color: var(--defaultWhite);
   }
+
   @media (width >= 481px) and (width <= 768px) {
-    max-width: 400px;
     width: 100%;
-    padding-top: 152px;
-    font-size: 33px !important;
-    margin: 0 auto;
+    max-width: 400px;
     height: 454px;
+    margin: 0 auto;
+    padding-top: 152px;
+
+    font-size: 33px !important;
   }
+
   @media (width >= 769px) and (width <= 855px) {
     font-size: 40px !important;
   }
+
   @media (width <= 480px) {
-    max-width: 304px;
     width: 100%;
-    font-size: 22px !important;
-    padding-top: 79px;
+    max-width: 304px;
     height: 227px;
     margin: 0 auto 20px;
+    padding-top: 79px;
+
+    font-size: 22px !important;
   }
 }
 
 .info {
-  max-width: 620px;
   width: 100%;
+  max-width: 620px;
 
   .description {
     margin-bottom: 32px;
+
     color: var(--primaryBlueColor1);
+
     @media (width <= 480px) {
       font-size: 16px !important;
     }
@@ -68,6 +81,7 @@
 .actions {
   display: flex;
   gap: 38px;
+
   @media (width <= 480px) {
     align-items: start;
     flex-direction: column;
