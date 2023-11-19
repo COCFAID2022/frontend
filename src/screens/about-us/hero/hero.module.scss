@@ -2,6 +2,7 @@
   position: relative;
   margin-bottom: 64px;
 }
+
 .uaMap {
   z-index: -1;
   position: absolute;
@@ -9,12 +10,12 @@
   right: 0;
   object-fit: contain;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     top: -3%;
     left: 50%;
     transform: translateX(-50%);
   }
-  @media (max-width: 480px) {
+  @media (width <= 480px) {
     top: 0;
     width: 335.255px;
     height: 227.008px;
@@ -26,10 +27,11 @@
   margin-bottom: 70px;
   text-align: center;
   color: var(--primaryBlueColor1);
+
   span {
     color: var(--defaultWhite);
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  @media (width >= 481px) and (width <= 768px) {
     max-width: 400px;
     width: 100%;
     padding-top: 152px;
@@ -37,10 +39,10 @@
     margin: 0 auto;
     height: 454px;
   }
-  @media (min-width: 769px) and (max-width: 855px) {
+  @media (width >= 769px) and (width <= 855px) {
     font-size: 40px !important;
   }
-  @media (max-width: 480px) {
+  @media (width <= 480px) {
     max-width: 304px;
     width: 100%;
     font-size: 22px !important;
@@ -57,7 +59,7 @@
   .description {
     margin-bottom: 32px;
     color: var(--primaryBlueColor1);
-    @media (max-width: 480px) {
+    @media (width <= 480px) {
       font-size: 16px !important;
     }
   }
@@ -66,7 +68,7 @@
 .actions {
   display: flex;
   gap: 38px;
-  @media (max-width: 480px) {
+  @media (width <= 480px) {
     align-items: start;
     flex-direction: column;
     gap: 24px;

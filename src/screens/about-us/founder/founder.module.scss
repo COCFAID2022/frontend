@@ -1,14 +1,15 @@
 .title {
   margin-bottom: 16px;
-  @media (max-width: 480px) {
+  @media (width <= 480px) {
     font-size: 24px !important;
     margin-bottom: 5px;
   }
 }
+
 .subtitle {
   color: var(--primaryBlueColor1);
   margin-bottom: 16px;
-  @media (max-width: 480px) {
+  @media (width <= 480px) {
     font-size: 16px !important;
     margin-bottom: 5px;
   }
@@ -16,7 +17,7 @@
 
 .border {
   margin-bottom: 32px;
-  @media (max-width: 480px) {
+  @media (width <= 480px) {
     font-size: 24px !important;
     margin-bottom: 16px;
   }
@@ -26,32 +27,34 @@
   display: flex;
   gap: 30px;
   margin-bottom: 64px;
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     flex-direction: column;
     gap: 24px;
     margin-bottom: 64px;
   }
 }
+
 .imageWrapper {
   max-width: 430.667px;
   width: 100%;
   flex-shrink: 0;
   border-radius: 6px;
   border: 1px solid var(--secondaryGreyColor3);
-  @media (max-width: 480px) {
+  @media (width <= 480px) {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  @media (width >= 481px) and (width <= 768px) {
     margin: 0 auto;
   }
+
   img {
     width: 250px;
     object-fit: cover;
     margin: 67px 96px 61px 83px;
-    @media (max-width: 480px) {
+    @media (width <= 480px) {
       margin: 50px 0;
     }
   }
@@ -61,13 +64,13 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
-  @media (min-width: 481px) and (max-width: 768px) {
+  @media (width >= 481px) and (width <= 768px) {
     gap: 16px;
   }
 }
 
 .fullName {
-  @media (min-width: 481px) and (max-width: 768px) {
+  @media (width >= 481px) and (width <= 768px) {
     font-size: 24px !important;
   }
 }

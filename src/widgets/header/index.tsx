@@ -22,23 +22,35 @@ export const Header = () => (
           Про нас
         </Typography>
       </Link>
-      <Link href={'/our-projects'} className={styles.link}>
-        <Typography fontWeight={'semiBold'} element={'h7'}>
+      <Link href={'/our-projects'}>
+        <Typography
+          fontWeight={'semiBold'}
+          element={'h7'}
+          className={styles.link}>
           Наші проекти
         </Typography>
       </Link>
-      <Link href={'/how-to-help'} className={styles.link}>
-        <Typography fontWeight={'semiBold'} element={'h7'}>
+      <Link href={'/how-to-help'}>
+        <Typography
+          fontWeight={'semiBold'}
+          element={'h7'}
+          className={styles.link}>
           Як допомогти
         </Typography>
       </Link>
-      <Link href={'/news'} className={styles.link}>
-        <Typography fontWeight={'semiBold'} element={'h7'}>
+      <Link href={'/news'}>
+        <Typography
+          fontWeight={'semiBold'}
+          element={'h7'}
+          className={styles.link}>
           Новини
         </Typography>
       </Link>
-      <Link href={'/teaching'} className={styles.link}>
-        <Typography fontWeight={'semiBold'} element={'h7'}>
+      <Link href={'/teaching'}>
+        <Typography
+          fontWeight={'semiBold'}
+          element={'h7'}
+          className={styles.link}>
           Навчання
         </Typography>
       </Link>
