@@ -10,7 +10,6 @@
     "stylelint-order"
   ],
   "rules": {
-    "color-hex-case": "upper",
     "custom-property-pattern": "^[a-zA-Z][a-zA-Z0-9]*$",
     "selector-class-pattern": "^[a-zA-Z][a-zA-Z0-9]*$",
     "prettier/prettier": true
