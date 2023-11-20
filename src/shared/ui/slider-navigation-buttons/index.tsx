@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import Image from 'next/image';
 import { FC } from 'react';
 
@@ -9,14 +10,15 @@ import styles from './slider-navigation-buttons.module.scss';
 interface SliderNavigationButtonsProps {
   onClickPrevSlide: () => void;
   onClickNextSlide: () => void;
+  className?: string;
 }
 
 export const SliderNavigationButtons: FC<
   SliderNavigationButtonsProps
 > = props => {
-  const { onClickPrevSlide, onClickNextSlide } = props;
+  const { onClickPrevSlide, onClickNextSlide, className = '' } = props;
   return (
-    <div className={styles.navigationButtons}>
+    <div className={classNames(styles.navigationButtons, className)}>
       <button
         type={'button'}
         onClick={onClickPrevSlide}
