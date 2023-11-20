@@ -24,6 +24,13 @@
   padding: 24px;
   gap: 16px;
 
+  .title,
+  .subtitle {
+    white-space: nowrap;
+
+    color: var(--primaryBlueColor1);
+  }
+
   .title {
     @media (width <= 480px) {
       font-size: 32px;
@@ -73,12 +80,6 @@
     padding: 69px 0 0;
     gap: 14px;
   }
-}
-
-.title .subtitle {
-  white-space: nowrap;
-
-  color: var(--primaryBlueColor1);
 }
 
 .image {

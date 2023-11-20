@@ -6,10 +6,10 @@ import { FC, useRef } from 'react';
 import { Swiper, SwiperRef, SwiperSlide } from 'swiper/react';
 import { SwiperOptions } from 'swiper/types';
 
-import { SliderNavigationButtons } from '@/screens/about-us/our-team/team-slider/slider-navigation-buttons/slider-navigation-buttons';
-import { WorkerSlide } from '@/screens/about-us/our-team/worker-slider/worker-slide';
+import { SliderNavigationButtons } from '@/shared/ui/slider-navigation-buttons';
 
 import { TypeTeamData } from '../team-data';
+import { WorkerSlide } from '../worker-slide';
 import styles from './team-slider.module.scss';
 
 type TypeTeamSliderProps = Pick<TypeTeamData, 'workers'>;

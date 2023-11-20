@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { TeamSlider } from '@/screens/about-us/our-team/team-slider/team-slider';
+import { TeamSlider } from '@/screens/about-us/our-team/team-slider';
 import { Typography } from '@/shared/ui/typography';
 
 import { TypeTeamData } from '../team-data';

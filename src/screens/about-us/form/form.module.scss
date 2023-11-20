@@ -139,12 +139,14 @@
   }
 
   .uaTitle {
-    padding-top: 75px;
-
     color: var(--primaryBlueColor1);
 
     span {
       color: var(--defaultWhite);
+    }
+
+    @media (width >= 1024px) {
+      padding-top: 75px;
     }
 
     @media (width <= 480px) {
