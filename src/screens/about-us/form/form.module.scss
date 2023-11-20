@@ -106,6 +106,8 @@
 .ua {
   position: relative;
 
+  height: 228px;
+
   img {
     position: absolute;
     z-index: -1;
@@ -137,6 +139,8 @@
   }
 
   .uaTitle {
+    padding-top: 75px;
+
     color: var(--primaryBlueColor1);
 
     span {
