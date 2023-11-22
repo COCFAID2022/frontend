@@ -13,7 +13,19 @@
     "airbnb/hooks",
     "plugin:prettier/recommended"
   ],
-
+  //  "settings": {
+  //    "import/resolver": {
+  //      "alias": {
+  //        "map": [
+  //          ["@/components/*", "src/components/*"],
+  //          ["@/styles/*", "src/styles/*"],
+  //          ["@/images/*", "public/static/images/*"],
+  //          ["@/icons/*", "public/static/svg/*"]
+  //        ],
+  //        "extensions": [".ts", ".tsx", ".json", ".css", ".scss"]
+  //      }
+  //    }
+  //  },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": "latest",

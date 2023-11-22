@@ -1,8 +1,8 @@
-import '@/shared/app/styles/globals.scss';
+import '@/styles/globals.scss';
 
 import { ReactNode } from 'react';
 
-import { Header } from '@/widgets/header';
+import { Header } from '../components/layout/header';
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
