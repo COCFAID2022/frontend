@@ -1,18 +1,5 @@
-import { StaticImageData } from 'next/image';
-
+import { TypeTeamData } from '@/screens/about-us/our-team/types';
 import photo from '@/shared/assets/img/stub_photo.png';
-
-export type TypeWorker = {
-  id: number;
-  img: StaticImageData;
-  fullName: string;
-  position: string;
-};
-export type TypeTeamData = {
-  department: string;
-  description: string;
-  workers: TypeWorker[];
-};
 
 export const teamData: TypeTeamData[] = [
   {

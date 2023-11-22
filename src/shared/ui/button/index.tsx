@@ -7,7 +7,7 @@ import { FC } from 'react';
 import {
   TypeHtmlFontWeight,
   TypeHtmlHeading,
-} from '@/shared/app/types/htmlElements';
+} from '@/shared/types/htmlElements';
 import { Typography } from '@/shared/ui/typography';
 
 import styles from './button.module.scss';

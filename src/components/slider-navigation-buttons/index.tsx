@@ -17,6 +17,7 @@ export const SliderNavigationButtons: FC<
   SliderNavigationButtonsProps
 > = props => {
   const { onClickPrevSlide, onClickNextSlide, className = '' } = props;
+
   return (
     <div className={classNames(styles.navigationButtons, className)}>
       <button

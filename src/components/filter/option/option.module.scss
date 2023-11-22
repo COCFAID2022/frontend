@@ -1,0 +1,39 @@
+.checkboxInput {
+  position: absolute;
+  left: -9999px;
+
+  opacity: 0;
+}
+
+.customCheckbox {
+  position: relative;
+
+  padding-left: 25px;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.customCheckmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 16px;
+  height: 16px;
+
+  border: 1px solid rgb(44 44 44 / 20%);
+  border-radius: 4px;
+  background-color: var(--defaultWhite);
+}
+
+.checkboxInput:checked ~ .customCheckmark {
+  border: none;
+
+  background-color: var(--primaryBlueColor1);
+  background-image: url('../../../shared/assets/icons/checkbox-tick.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-x: 2px;
+  background-position-y: 3px;
+}

@@ -90,9 +90,9 @@ import { SwiperRef } from 'swiper/react';
 
 import IconArrowTopLight from '@/shared/assets/icons/arrowTopRightLight.svg';
 import { Button } from '@/shared/ui/button';
-import { SliderNavigationButtons } from '@/shared/ui/slider-navigation-buttons';
 import { Typography } from '@/shared/ui/typography';
 
+import { SliderNavigationButtons } from '../../../components/slider-navigation-buttons';
 import styles from './partners.module.scss';
 import { Slider } from './slider';
 
