@@ -1,5 +1,5 @@
+import { TypeCardData } from '@/components/card/types';
 import CartImage from '@/shared/assets/img/cart-image.png';
-import { TypeCardData } from '@/shared/types/card-section';
 
 export const helpVpoItems: TypeCardData[] = [
   {
