@@ -1,5 +1,4 @@
-import '@/styles/reset.scss';
-import '@/styles/globals.scss';
+import './globals.scss';
 
 import classNames from 'classnames';
 import { Inter, Montserrat_Alternates } from 'next/font/google';

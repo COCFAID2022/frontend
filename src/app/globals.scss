@@ -1,4 +1,5 @@
-@import './variables';
+@import '../styles/reset';
+@import '../styles/variables/index';
 
 * {
   font-family: var(--fontMontserratAlternates);
