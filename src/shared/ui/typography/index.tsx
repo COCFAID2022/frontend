@@ -4,7 +4,7 @@ import { createElement, FC, PropsWithChildren } from 'react';
 import {
   TypeHtmlFontWeight,
   TypeHtmlHeading,
-} from '@/shared/app/types/htmlElements';
+} from '@/shared/types/htmlElements';
 
 import styles from './typography.module.scss';
 
@@ -19,8 +19,10 @@ interface TypographyProps extends PropsWithChildren {
 export const Typography: FC<TypographyProps> = props => {
   const { element, size, type, className = '', fontWeight, children } = props;
 
+  const el = element === 'h7' ? 'h6' : element;
+
   return createElement(
-    element,
+    el,
     {
       className: classNames(
         className,
