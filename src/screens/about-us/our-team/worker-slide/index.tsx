@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import { FC } from 'react';
 
+import { TypeWorker } from '@/screens/about-us/our-team/types';
 import { Typography } from '@/shared/ui/typography';
 
-import { TypeWorker } from '../team-data';
 import styles from './worker-slide.module.scss';
 
 interface WorkerSlideProps {
