@@ -5,22 +5,25 @@ import Link from 'next/link';
 import { LangSwitcher } from '@/components/layout/header/lang-switcher';
 import { Button } from '@/components/ui/button';
 import { Typography } from '@/components/ui/typography';
+import arrowTopRightLight from '@/icons/arrowTopRightLight.svg';
+import phoneIcon from '@/icons/phone.svg';
+import burgerIcon from '@/images/burger-menu.png';
+import headerLogo from '@/images/header_logo-blue.png';
 
-import arrowTopRightLight from '../../../../public/static/icons/arrowTopRightLight.svg';
-import phoneIcon from '../../../../public/static/icons/phone.svg';
-import burgerIcon from '../../../../public/static/images/burger-menu.png';
-import headerLogo from '../../../../public/static/images/header_logo-blue.png';
 import styles from './header.module.scss';
 
 export const Header = () => (
   <header className={classNames(styles.header, 'container')}>
-    <Link href={'/'}>
+    <Link href={'/'} className={styles.logoWrapper}>
       <Image src={headerLogo} className={styles.logo} alt={'header_logo'} />
     </Link>
 
     <nav className={styles.navigation}>
-      <Link href={'/about-us'} className={styles.link}>
-        <Typography fontWeight={'semiBold'} element={'h7'}>
+      <Link href={'/about-us'}>
+        <Typography
+          fontWeight={'semiBold'}
+          element={'h7'}
+          className={styles.link}>
           Про нас
         </Typography>
       </Link>
