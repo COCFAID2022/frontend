@@ -5,7 +5,7 @@
 
   margin-bottom: 32px;
 
-  @media (width <= 768px) {
+  @media (width <= 820px) {
     position: relative;
   }
 
@@ -33,11 +33,11 @@
 
   .title {
     @media (width <= 480px) {
-      font-size: 32px;
+      font-size: 32px !important;
     }
 
     @media (width >= 481px) and (width <= 768px) {
-      font-size: 38px;
+      font-size: 38px !important;
     }
 
     @media (width >= 820px) and (width <= 1023px) {
@@ -53,17 +53,17 @@
     @media (width <= 480px) {
       margin-bottom: 18px;
 
-      font-size: 24px;
+      font-size: 24px !important;
     }
 
     @media (width >= 481px) and (width <= 768px) {
-      font-size: 26px;
+      font-size: 26px !important;
     }
   }
 
   .description {
     @media (width <= 480px) {
-      font-size: 18px;
+      font-size: 18px !important;
     }
   }
 
@@ -98,7 +98,7 @@
     position: absolute;
     z-index: -1;
     top: 0;
-    right: -15px;
+    right: -30px;
 
     width: 195px;
     height: 179px;
