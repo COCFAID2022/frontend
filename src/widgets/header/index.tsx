@@ -14,7 +14,9 @@ import styles from './header.module.scss';
 
 export const Header = () => (
   <header className={classNames(styles.header, 'container')}>
-    <Image src={headerLogo} className={styles.logo} alt={'header_logo'} />
+    <Link href={'/'}>
+      <Image src={headerLogo} className={styles.logo} alt={'header_logo'} />
+    </Link>
 
     <nav className={styles.navigation}>
       <Link href={'/about-us'} className={styles.link}>
