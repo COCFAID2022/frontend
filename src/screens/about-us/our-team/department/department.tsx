@@ -1,9 +1,9 @@
 import { FC } from 'react';
 
 import { TeamSlider } from '@/screens/about-us/our-team/team-slider';
+import { TypeTeamData } from '@/screens/about-us/our-team/types';
 import { Typography } from '@/shared/ui/typography';
 
-import { TypeTeamData } from '../team-data';
 import styles from './department.module.scss';
 
 interface DepartmentProps extends TypeTeamData {}
