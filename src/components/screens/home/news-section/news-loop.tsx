@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { FC } from 'react';
 
 import BlueArrow from '../image/arrow-blue.png';
 import MainStyle from '../StyleHelpPage.module.scss';
@@ -27,7 +28,7 @@ const escapeHTML = (str: string): string =>
       })[tag] || tag
   );
 
-const NewsLoop: React.FC<NewsLoopProps> = ({ newsItems }) => {
+const NewsLoop: FC<NewsLoopProps> = ({ newsItems }) => {
   const newsCards = newsItems.map(item => (
     <article key={item.news} className={style['block-news-cards-items']}>
       <h4 className={style['block-news-cards-items__title']}>

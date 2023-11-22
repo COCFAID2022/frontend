@@ -19,8 +19,7 @@ export const FormInfo = () => {
     reset,
   } = useForm<TypeSchema>({ resolver: yupResolver(schema) });
 
-  const submitFormHandler: SubmitHandler<TypeSchema> = data => {
-    console.log(data);
+  const submitFormHandler: SubmitHandler<TypeSchema> = () => {
     reset();
   };
 

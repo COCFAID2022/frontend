@@ -21,12 +21,23 @@
     padding-top: 20px;
     padding-bottom: 10px;
   }
+
+  @media (width <= 992px) {
+    justify-content: stretch;
+  }
+}
+
+.logoWrapper {
+  margin-right: auto;
+
+  @media (width >= 993px) {
+    margin-right: 0;
+  }
 }
 
 .logo {
   width: 62px;
   height: 71px;
-  margin-right: auto;
 
   @media (width <= 480px) {
     width: 40px;
@@ -36,10 +47,6 @@
   @media (width >= 481px) and (width <= 768px) {
     width: 50px;
     height: 56px;
-  }
-
-  @media (width >= 993px) {
-    margin-right: 0;
   }
 }
 
@@ -54,10 +61,6 @@
 
   @media (width >= 993px) and (width <= 1080px) {
     gap: 12px;
-
-    .link {
-      font-size: 12px;
-    }
   }
 }
 
