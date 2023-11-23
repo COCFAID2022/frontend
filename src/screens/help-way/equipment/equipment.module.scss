@@ -1,0 +1,19 @@
+.equipment {
+  padding-top: 64px;
+
+  .title {
+    margin-bottom: 24px;
+
+    @media (width <= 767px) {
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .wrap__equipment {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 13px;
+    margin-bottom: 32px;
+  }
+}

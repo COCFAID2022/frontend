@@ -4,7 +4,7 @@ import { FC } from 'react';
 import { Typography } from '@/shared/ui/typography';
 
 import { TypeWorker } from '../team-data';
-import styles from './worker-slide.module.scss';
+import styles from '../worker-slider/worker-slide.module.scss';
 
 interface WorkerSlideProps {
   worker: TypeWorker;
