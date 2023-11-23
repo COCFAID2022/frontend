@@ -1,0 +1,29 @@
+.navigationButtons {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 5px;
+
+  height: 8px;
+  margin: 24px 0 20px;
+
+  @media (width <= 480px) {
+    margin: 10px 0;
+  }
+
+  @media (width >= 481px) and (width <= 580px) {
+    margin: 10px 0;
+  }
+
+  @media (width >= 581px) and (width <= 630px) {
+    margin: 5px 0;
+  }
+
+  @media (width >= 631px) and (width <= 768px) {
+    margin: 10px 0;
+  }
+}
+
+.button {
+  cursor: pointer;
+}

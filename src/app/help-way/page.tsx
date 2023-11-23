@@ -1,4 +1,4 @@
-import { HelpWayScreen } from '@/screens/help-way';
+import { HelpWayScreen } from '@/components/screens/help-way';
 
 export default function HelpWay() {
   return <HelpWayScreen />;
