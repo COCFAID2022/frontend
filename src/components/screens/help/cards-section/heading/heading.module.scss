@@ -8,6 +8,48 @@
   margin-bottom: 16px;
 }
 
+.filterWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (width < 375px) {
+    gap: 10px;
+  }
+}
+
+.titles {
+  width: 100%;
+}
+
+.title {
+  align-items: center;
+
+  margin-bottom: 15px;
+
+  h1 {
+    @media (width <= 375px) {
+      font-size: 26px !important;
+    }
+    @media (width > 375px) and (width <= 480px) {
+      font-size: 30px;
+    }
+    @media (width > 480px) and (width <= 768px) {
+      font-size: 36px;
+    }
+  }
+  @media (width > 480px) and (width <= 768px) {
+    margin-bottom: 7px;
+  }
+  @media (width < 480px) {
+    margin-bottom: 5px;
+  }
+}
+
 .subtitle {
   line-height: 36px;
+  @media (width < 375px) {
+    font-size: 16px !important;
+    line-height: 20px;
+  }
 }

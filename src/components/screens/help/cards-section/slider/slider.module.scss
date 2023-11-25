@@ -1,9 +1,6 @@
-.slider {
-}
-
-.slide {
-}
-
 .card {
   padding: 24px 0;
+  @media (width <= 480px) {
+    margin: 0 auto;
+  }
 }

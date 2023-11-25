@@ -20,14 +20,16 @@ export const Heading: FC<HeadingProps> = props => {
     <div className={styles.topBox}>
       <div className={styles.titles}>
         <Title href={title.href} text={title.text} className={styles.title} />
-        <Typography
-          fontWeight={'regular'}
-          element={'h5'}
-          className={styles.subtitle}>
-          {subTitle}
-        </Typography>
+        <div className={styles.filterWrapper}>
+          <Typography
+            fontWeight={'regular'}
+            element={'h5'}
+            className={styles.subtitle}>
+            {subTitle}
+          </Typography>
+          <Filter />
+        </div>
       </div>
-      <Filter />
     </div>
   );
 };
