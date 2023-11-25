@@ -45,7 +45,7 @@ export const Card: FC<CardProps> = props => {
 
       {collectingMoney?.progressPercent && progress && (
         <div>
-          <div>
+          <div className={styles.result}>
             <Typography fontWeight={'semiBold'} element={'h6'}>
               Зібрано коштів
             </Typography>
@@ -54,7 +54,10 @@ export const Card: FC<CardProps> = props => {
             </Typography>
           </div>
 
-          <ProgressLine percent={collectingMoney.progressPercent} />
+          <ProgressLine
+            className={styles.progress}
+            percent={collectingMoney.progressPercent}
+          />
 
           <Typography fontWeight={'regular'} element={'h7'}>
             {collectingMoney.collected}₴ / {collectingMoney.needCollect}₴

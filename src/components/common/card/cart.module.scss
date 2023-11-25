@@ -18,8 +18,25 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media (width <= 1024px) {
+    align-self: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
 .ended {
   opacity: 0.5;
+}
+
+.result {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 7px;
+}
+
+.progress {
+  margin-bottom: 10px;
 }
