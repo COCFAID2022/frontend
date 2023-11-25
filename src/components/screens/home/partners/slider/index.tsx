@@ -67,6 +67,11 @@ export const Slider: FC<SliderProps> = props => {
       ref={sliderRef}
       className={styles.slider}
       slidesPerView={6}
+      breakpoints={{
+        0: { slidesPerView: 'auto', loop: true, spaceBetween: 10 },
+        480: { slidesPerView: 'auto', loop: true, spaceBetween: 15 },
+        768: { slidesPerView: 'auto', loop: true, spaceBetween: 24 },
+      }}
       spaceBetween={24}>
       {sliderItems.map(item => {
         return (

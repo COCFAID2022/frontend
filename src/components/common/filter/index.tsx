@@ -25,7 +25,10 @@ export const Filter = () => {
         className={styles.filterButton}
         type={'button'}
         onClick={filterMenuHandler}>
-        <Typography fontWeight={'regular'} element={'h6'}>
+        <Typography
+          fontWeight={'regular'}
+          element={'h6'}
+          className={styles.buttonText}>
           Фільтр
         </Typography>
         <Image src={FilterIcon} alt={'filter'} />

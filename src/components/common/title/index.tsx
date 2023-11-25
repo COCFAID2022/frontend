@@ -12,10 +12,11 @@ interface TitleProps {
   href: string;
   text: string;
   className?: string;
+  iconSize?: 'sm' | 'md' | 'lg';
 }
 
 export const Title: FC<TitleProps> = props => {
-  const { text, href, className = '' } = props;
+  const { text, href, iconSize = 'md', className = '' } = props;
   return (
     <Link href={href} className={classNames(styles.title, className)}>
       <Typography fontWeight={'semiBold'} element={'h1'}>
@@ -23,7 +24,7 @@ export const Title: FC<TitleProps> = props => {
       </Typography>
       <Button
         variant={'default'}
-        size={'lg'}
+        size={iconSize}
         icon={{
           image: ArrowTopLightIcon,
           variant: 'black',

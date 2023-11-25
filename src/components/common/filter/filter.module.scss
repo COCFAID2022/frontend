@@ -2,7 +2,6 @@
   position: relative;
 
   display: flex;
-  align-self: flex-end;
 }
 
 .filterButton {
@@ -14,6 +13,17 @@
   opacity: 1;
 
   gap: 10px;
+
+  @media (width <= 480px) {
+    align-items: flex-end;
+    flex-direction: column;
+  }
+}
+
+.buttonText {
+  @media (width <= 480px) {
+    display: none;
+  }
 }
 
 .open .filterButton {

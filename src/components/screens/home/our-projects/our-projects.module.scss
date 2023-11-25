@@ -1,0 +1,18 @@
+.subtitle {
+  margin-bottom: 16px;
+}
+
+.border {
+  margin-bottom: 30px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 24px;
+}
+
+.card {
+  padding: 24px 0;
+}
