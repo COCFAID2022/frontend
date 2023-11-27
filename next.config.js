@@ -1,7 +1,10 @@
 /** @type {import('next').NextConfig} */
+
 const nextConfig = {
+  output: 'export',
   images: {
-    domains: ['images.unsplash.com', 'https://bf2022.onrender.com'],
+    unoptimized: true,
+    domains: ['images.unsplash.com'],
   },
 };
 
