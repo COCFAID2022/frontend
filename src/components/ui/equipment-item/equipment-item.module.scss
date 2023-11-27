@@ -1,8 +1,9 @@
 .title {
-  padding: 15px 30px;
-  border-radius: 8px;
-  border: 1px solid #039cfd;
   width: fit-content;
+  padding: 15px 30px;
+
+  border: 1px solid #039cfd;
+  border-radius: 8px;
 
   @media (width <= 767px) {
     font-size: 14px;

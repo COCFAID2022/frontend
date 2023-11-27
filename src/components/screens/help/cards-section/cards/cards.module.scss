@@ -2,10 +2,21 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 24px;
+  @media (width <= 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-row-gap: 16px;
+  }
+  @media (width <= 480px) {
+    display: block;
+  }
 }
 
 .card {
   padding: 24px 0;
+  @media (width <= 480px) {
+    margin: 0 auto;
+  }
 }
 
 .navBtns {
