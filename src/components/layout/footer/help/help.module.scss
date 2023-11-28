@@ -1,0 +1,28 @@
+@import '../../../../styles/mixins/breakepoints';
+
+.help {
+  margin-bottom: 24px;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  @include tablet {
+    margin-bottom: 24px;
+    margin-left: 0;
+  }
+
+  @include desktop {
+    margin-bottom: 0;
+  }
+}
+
+.title {
+  @include reducefont(18px);
+}
+
+.subtitle {
+  @include reducefont(14px);
+  color: var(--secondaryGreyColor1);
+  opacity: 0.6;
+}

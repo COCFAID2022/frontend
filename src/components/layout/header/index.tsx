@@ -35,7 +35,7 @@ export const Header = () => (
           Наші проекти
         </Typography>
       </Link>
-      <Link href={'/how-to-help'}>
+      <Link href={'/help-way'}>
         <Typography
           fontWeight={'semiBold'}
           element={'h7'}
