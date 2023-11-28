@@ -28,7 +28,7 @@
     'socials about';
 
   @include tablet {
-    column-gap: 60px;
+    column-gap: 24px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
       'logo help partnership'
