@@ -1,0 +1,23 @@
+@import '../../../../styles/mixins/breakepoints';
+
+.socialsWrapper {
+  @include desktop {
+    margin-top: 10px;
+    margin-left: auto;
+  }
+}
+
+.title {
+  @include reducefont(14px);
+}
+
+.list {
+  margin-top: 16px;
+  padding: 8px 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 16px;
+}
