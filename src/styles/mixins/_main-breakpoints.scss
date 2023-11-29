@@ -1,0 +1,17 @@
+// $screen-s: 375px;
+$screen-s: 480px;
+$screen-m: 768px;
+$screen-l: 1024px;
+$screen-xl: 1440px;
+
+@mixin mobile() {
+  @media (width <= $screen-s) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media (width <= $screen-m) {
+    @content;
+  }
+}
