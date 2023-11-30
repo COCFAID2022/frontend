@@ -1,0 +1,39 @@
+.slider {
+  height: 1000px;
+  margin-bottom: 10px;
+
+  @media (width >= 440px) {
+    height: 900px;
+  }
+  @media (width >= 527px) {
+    height: 840px;
+  }
+  @media (width >= 852px) {
+    height: 700px;
+    margin-bottom: 20px;
+  }
+}
+
+.sliderWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btnNavigation {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+
+  @media (width >= 768px) {
+    position: absolute;
+    top: 15px;
+    right: 46px;
+  }
+
+  @media (width >= 1124px) {
+    position: absolute;
+    top: 15px;
+    right: 0;
+  }
+}
