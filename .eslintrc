@@ -21,6 +21,7 @@
   },
   "plugins": ["simple-import-sort", "check-file", "prettier"],
   "rules": {
+    "prettier/prettier": 0,
     "import/extensions": [
       "error",
       "ignorePackages",
