@@ -5,11 +5,8 @@ import Image from 'next/image';
 import { useState } from 'react';
 
 import { Title } from '@/components/common/title';
-import { Button } from '@/components/ui/button';
 import { Typography } from '@/components/ui/typography';
-import arrowTopRightLight from '@/icons/arrowTopRightLight.svg';
 import minus from '@/icons/minus.svg';
-import phoneIcon from '@/icons/phone.svg';
 import plus from '@/icons/plus.svg';
 
 import style from './question.module.scss';
@@ -62,49 +59,6 @@ export const Question = () => {
           </li>
         ))}
       </ul>
-
-      <div className={style.consultation}>
-        <div className={style.consultationText}>
-          <Typography
-            fontWeight={'semiBold'}
-            element={'h3'}
-            className={style.titleHelp}>
-            Потрібна консультація?
-          </Typography>
-          <Typography fontWeight={'regular'} element={'p'}>
-            Наші менеджери завжди раді Вам допомогти
-          </Typography>
-        </div>
-        <div className={style.btnHelp}>
-          <Button
-            variant={'outlined'}
-            size={'sm'}
-            icon={{ variant: 'blue', position: 'left', image: phoneIcon }}
-            label={'Гаряча лінія'}
-            value={{
-              element: 'h7',
-              fontWeight: 'semiBold',
-              color: 'blue',
-              text: '050 612 45 68',
-            }}
-          />
-          <Button
-            variant={'outlined'}
-            size={'sm'}
-            icon={{
-              variant: 'blue',
-              position: 'left',
-              image: arrowTopRightLight,
-            }}
-            value={{
-              text: 'Підтримати',
-              color: 'blue',
-              fontWeight: 'semiBold',
-              element: 'h7',
-            }}
-          />
-        </div>
-      </div>
     </section>
   );
 };
