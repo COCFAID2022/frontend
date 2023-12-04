@@ -4,6 +4,9 @@ import { News } from '@/components/screens/home/news';
 import { OurProjects } from '@/components/screens/home/our-projects';
 import { Partners } from '@/components/screens/home/partners';
 
+import { Consultation } from './consultation';
+import { Question } from './question-section/question';
+
 export const HomeScreen = () => (
   <>
     <Hero />
@@ -11,5 +14,7 @@ export const HomeScreen = () => (
     <Help />
     <OurProjects />
     <News />
+    <Question />
+    <Consultation />
   </>
 );

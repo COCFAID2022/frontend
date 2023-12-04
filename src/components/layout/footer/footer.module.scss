@@ -27,6 +27,31 @@
     'socials partnership'
     'socials about';
 
+  & .logoLink {
+    grid-area: logo;
+  }
+
+  & .helpList {
+    grid-area: help;
+  }
+
+  & .partnershipList {
+    grid-area: partnership;
+  }
+
+  & .aboutList {
+    grid-area: about;
+  }
+
+  & .socials {
+    justify-self: center;
+    grid-area: socials;
+
+    @include tablet {
+      justify-self: start;
+    }
+  }
+
   @include tablet {
     column-gap: 24px;
     grid-template-columns: 1fr 1fr 1fr;
@@ -38,27 +63,6 @@
   @include desktop {
     display: flex;
     gap: 30px;
-  }
-
-  & .logoLink {
-    grid-area: logo;
-  }
-  & .helpList {
-    grid-area: help;
-  }
-  & .partnershipList {
-    grid-area: partnership;
-  }
-  & .aboutList {
-    grid-area: about;
-  }
-  & .socials {
-    justify-self: center;
-    grid-area: socials;
-
-    @include tablet {
-      justify-self: start;
-    }
   }
 }
 
@@ -78,6 +82,7 @@
 
 .copyright {
   text-align: center;
-  color: var(--secondaryGreyColor1);
+
   opacity: 0.6;
+  color: var(--secondaryGreyColor1);
 }
