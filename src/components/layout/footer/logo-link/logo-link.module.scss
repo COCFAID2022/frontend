@@ -1,10 +1,11 @@
 @import '../../../../styles/mixins/breakepoints';
 
 .logoWrapper {
-  margin-bottom: 36px;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
+
+  margin-bottom: 36px;
 
   @include tablet {
     margin-bottom: 0;
@@ -12,10 +13,10 @@
 }
 
 .logo {
-  margin-top: -6px;
-  margin-bottom: 16px;
   width: 62px;
   height: 71px;
+  margin-top: -6px;
+  margin-bottom: 16px;
 
   @include desktop {
     margin-top: -8px;
@@ -24,11 +25,12 @@
 
 .title {
   margin-bottom: 16px;
+
   color: var(--primaryBlueColor2);
   @include reducefont(18px);
 }
 
 .subtitle {
-  @include reducefont(14px);
   color: var(--primaryBlueColor2);
+  @include reducefont(14px);
 }
