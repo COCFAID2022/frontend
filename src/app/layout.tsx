@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import { Inter, Montserrat_Alternates } from 'next/font/google';
 import { ReactNode } from 'react';
 
+import { Footer } from '@/components/layout/footer';
 import { Header } from '@/components/layout/header';
 
 const inter = Inter({
@@ -30,6 +31,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         )}>
         <Header />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
