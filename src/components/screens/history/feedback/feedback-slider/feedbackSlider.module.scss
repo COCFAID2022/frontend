@@ -1,16 +1,16 @@
-.slider {
-  height: 1000px;
-  margin-bottom: 10px;
+.swiperContainer {
+  display: flex;
+  gap: 16px;
 
-  @media (width >= 440px) {
-    height: 900px;
-  }
-  @media (width >= 527px) {
-    height: 840px;
-  }
-  @media (width >= 852px) {
-    height: 700px;
-    margin-bottom: 20px;
+  flex-direction: column;
+
+  margin-bottom: 32px;
+
+  @media (width >= 768px) {
+    display: flex;
+    gap: 32px;
+
+    flex-direction: column;
   }
 }
 

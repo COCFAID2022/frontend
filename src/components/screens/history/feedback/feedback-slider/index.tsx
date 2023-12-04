@@ -2,7 +2,7 @@
 
 import 'swiper/css';
 
-import { FC, useRef } from 'react';
+import { FC, useEffect, useRef, useState } from 'react';
 import { Swiper, SwiperRef, SwiperSlide } from 'swiper/react';
 
 import { SliderNavigationButtons } from '@/components/common/slider-navigation-buttons';
@@ -20,27 +20,30 @@ interface FeedbackSliderProps {
 export const FeedbackSlider: FC<FeedbackSliderProps> = ({ data }) => {
   const sliderRef = useRef<SwiperRef>(null);
 
-  const onClickPrevSlide = () => {
-    const currentSlideIndex = sliderRef.current?.swiper.realIndex;
-    if (typeof currentSlideIndex === 'number') {
-      const newIndex = currentSlideIndex - 5;
-      sliderRef.current?.swiper.slideTo(newIndex);
+  const [slides, setSlides] = useState<Array<JSX.Element[]>>([]);
+
+  useEffect(() => {
+    const groupedSlides: JSX.Element[][] = [];
+    for (let i = 0; i < data.length; i += 5) {
+      const group = data.slice(i, i + 5);
+
+      const groupElements = group.map(feedback => (
+        <CardSlider key={feedback.id} {...feedback} />
+      ));
+
+      groupedSlides.push(groupElements);
     }
+    setSlides(groupedSlides);
+  }, [data]);
+
+  const onClickPrevSlide = () => {
+    sliderRef.current?.swiper.slidePrev();
   };
 
   const onClickNextSlide = () => {
-    const currentSlideIndex = sliderRef.current?.swiper.realIndex;
-    if (typeof currentSlideIndex === 'number') {
-      const newIndex = currentSlideIndex + 5;
-      sliderRef.current?.swiper.slideTo(newIndex);
-    }
+    sliderRef.current?.swiper.slideNext();
   };
 
-  const swiperBreakpoints = {
-    320: {
-      slidesPerView: 5,
-    },
-  };
   return (
     <>
       <SliderNavigationButtons
@@ -49,16 +52,16 @@ export const FeedbackSlider: FC<FeedbackSliderProps> = ({ data }) => {
         onClickPrevSlide={onClickPrevSlide}
       />
       <Swiper
-        direction={'vertical'}
-        slidesPerView={5}
+        direction={'horizontal'}
+        slidesPerView={1}
         spaceBetween={5}
         ref={sliderRef}
-        breakpoints={swiperBreakpoints}
         loop
         className={style.slider}>
-        {data.map(feedback => (
-          <SwiperSlide key={feedback.id}>
-            <CardSlider key={feedback.id} {...feedback} />
+        {slides.map((feedback, index) => (
+          // eslint-disable-next-line react/no-array-index-key
+          <SwiperSlide className={style.swiperContainer} key={index}>
+            {feedback}
           </SwiperSlide>
         ))}
       </Swiper>
