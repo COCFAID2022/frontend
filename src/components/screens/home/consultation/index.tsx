@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+import { FC } from 'react';
 
 import { Button } from '@/components/ui/button';
 import { Typography } from '@/components/ui/typography';
@@ -7,22 +8,41 @@ import phoneIcon from '@/icons/phone.svg';
 
 import style from './consultation.module.scss';
 
-export const Consultation = () => {
+interface ConsultationProps {
+  title: string;
+  secondTitle?: string;
+  addBtn: boolean;
+}
+
+// if you need third buutton , style will change. See code where use classNames
+
+export const Consultation: FC<ConsultationProps> = props => {
+  const { title, secondTitle, addBtn } = props;
   return (
     <section className={classNames('container')}>
-      <div className={style.consultation}>
+      <div
+        className={classNames({
+          [style.consultation]: !addBtn,
+          [style.consultationHistory]: addBtn,
+        })}>
         <div className={style.consultationText}>
           <Typography
             fontWeight={'semiBold'}
             element={'h3'}
             className={style.titleHelp}>
-            Потрібна консультація?
+            {title}
           </Typography>
-          <Typography fontWeight={'regular'} element={'p'}>
-            Наші менеджери завжди раді Вам допомогти
-          </Typography>
+          {secondTitle && (
+            <Typography fontWeight={'regular'} element={'p'}>
+              {secondTitle}
+            </Typography>
+          )}
         </div>
-        <div className={style.btnHelp}>
+        <div
+          className={classNames({
+            [style.btnHelp]: !addBtn,
+            [style.btnHelpHistory]: addBtn,
+          })}>
           <Button
             variant={'outlined'}
             size={'sm'}
@@ -35,6 +55,23 @@ export const Consultation = () => {
               text: '050 612 45 68',
             }}
           />
+          {addBtn && (
+            <Button
+              variant={'outlined'}
+              size={'sm'}
+              icon={{
+                position: 'left',
+                variant: 'black',
+                image: arrowTopRightLight,
+              }}
+              value={{
+                text: 'Стати партнером',
+                fontWeight: 'semiBold',
+                element: 'h7',
+                color: 'black',
+              }}
+            />
+          )}
           <Button
             variant={'outlined'}
             size={'sm'}
