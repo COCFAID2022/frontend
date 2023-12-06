@@ -1,0 +1,12 @@
+.containerWrapper {
+  position: relative;
+
+  margin-top: var(--xl3Spacing);
+
+  @media (width >= 768px) {
+    padding: 0 25px;
+  }
+  @media (width >= 1124px) {
+    padding: 0;
+  }
+}

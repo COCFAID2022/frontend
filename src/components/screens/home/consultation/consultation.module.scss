@@ -1,0 +1,99 @@
+.consultation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: var(--lgSpacing);
+  margin-bottom: var(--mdSpacing);
+
+  padding-top: 33px;
+  padding-bottom: 33px;
+  padding-left: 92px;
+
+  border: 5px solid rgb(37 26 221 / 20%);
+
+  @media (width <= 586px) {
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+
+    margin-top: var(--lgSpacing);
+    margin-bottom: var(--mdSpacing);
+    padding: 32px 17px;
+    gap: 20px;
+
+    border: 5px solid rgb(37 26 221 / 20%);
+  }
+}
+
+.consultationHistory {
+  display: flex;
+  align-items: baseline;
+  flex-direction: column;
+
+  margin-top: var(--lgSpacing);
+  margin-bottom: var(--mdSpacing);
+  padding: 32px 17px;
+
+  border: 5px solid rgb(37 26 221 / 20%);
+
+  @media (width >= 1024px) {
+    padding: 32px 96px;
+  }
+}
+
+.consultationText {
+  display: flex;
+  flex-direction: column;
+
+  // margin-left: 92px;
+
+  @media (width <= 768px) {
+    align-items: center;
+
+    // margin-left: 27px;
+  }
+}
+
+.btnHelp {
+  margin-right: 34px;
+  @media (width >= 912px) {
+    display: flex;
+    gap: 38px;
+  }
+  @media (width <= 910px) {
+    display: flex;
+    gap: 20px;
+
+    flex-direction: column;
+  }
+
+  @media (width <= 482px) {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+.btnHelpHistory {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  margin-top: 34px;
+  margin-right: 34px;
+  @media (width >= 700px) {
+    flex-direction: row;
+    gap: 38px;
+  }
+}
+
+.titleHelp {
+  font-size: 20px;
+  @media (width >= 768px) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    font-size: 26px;
+  }
+}

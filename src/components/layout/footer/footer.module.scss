@@ -1,0 +1,88 @@
+@import 'footer-breakpoints';
+
+.footer {
+  padding-top: 40px;
+  padding-bottom: 15px;
+
+  @include tablet {
+    padding-top: 40px;
+    padding-bottom: 25px;
+  }
+
+  @include desktop {
+    padding-top: 95px;
+    padding-bottom: 95px;
+  }
+}
+
+.footerWrapper {
+  display: grid;
+  align-content: start;
+
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    'logo help'
+    'socials help'
+    'socials partnership'
+    'socials about';
+
+  & .logoLink {
+    grid-area: logo;
+  }
+
+  & .helpList {
+    grid-area: help;
+  }
+
+  & .partnershipList {
+    grid-area: partnership;
+  }
+
+  & .aboutList {
+    grid-area: about;
+  }
+
+  & .socials {
+    justify-self: center;
+    grid-area: socials;
+
+    @include tablet {
+      justify-self: start;
+    }
+  }
+
+  @include tablet {
+    column-gap: 24px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      'logo help partnership'
+      'logo about socials';
+  }
+
+  @include desktop {
+    display: flex;
+    gap: 30px;
+  }
+}
+
+.border {
+  margin-top: 40px;
+  margin-bottom: 15px;
+
+  @include tablet {
+    margin-top: 60px;
+  }
+
+  @include desktop {
+    margin-top: 118px;
+    margin-bottom: 28px;
+  }
+}
+
+.copyright {
+  text-align: center;
+
+  opacity: 0.6;
+  color: var(--secondaryGreyColor1);
+}

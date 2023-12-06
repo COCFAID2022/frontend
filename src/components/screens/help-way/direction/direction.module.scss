@@ -5,7 +5,7 @@
 
   padding-top: 32px;
 
-  .direction__left {
+  .directionLeft {
     max-width: 712px;
   }
 
@@ -37,7 +37,7 @@
     }
   }
 
-  .wrap__btns {
+  .wrapBtns {
     display: flex;
 
     button:first-of-type {
@@ -52,5 +52,19 @@
   @media (width <= 1040px) {
     align-items: flex-start;
     flex-direction: column;
+  }
+}
+
+.flexContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  @media (width >= 854px) {
+    display: flex;
+
+    align-items: center;
+    flex-direction: row;
+    gap: 24px;
   }
 }

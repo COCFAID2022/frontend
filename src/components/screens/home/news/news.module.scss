@@ -1,0 +1,66 @@
+@import 'main-breakpoints';
+
+.news {
+  margin-bottom: 32px;
+}
+.subtitle {
+  margin-bottom: 16px;
+}
+
+.border {
+  margin-bottom: 32px;
+}
+
+.cardSet {
+  margin-bottom: 32px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 24px;
+  grid-row-gap: 16px;
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  @include mobile {
+    display: block;
+  }
+}
+
+.card {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  border: 1px solid var(--secondaryGreyColor1);
+
+  @include mobile {
+    &:not(:last-of-type) {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.title {
+  height: 76px;
+  overflow-y: hidden;
+}
+
+.post {
+  height: 76px;
+  overflow-y: hidden;
+}
+
+.dateWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.date {
+  color: var(--secondaryGreyColor1);
+  opacity: 0.5;
+}
