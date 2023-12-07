@@ -11,6 +11,7 @@ import { Typography } from '@/components/ui/typography';
 
 import buttonIconLight from '../../../../../public/static/icons/arrowTopRightLight.svg';
 import heard from '../../../../../public/static/icons/Vector.svg';
+import { Slider } from '../slider';
 import style from './header.module.scss';
 import { VideoPlayer } from './video-player/VideoPlayer';
 
@@ -34,6 +35,7 @@ export const Header = () => {
       <div className={style.flexContainer}>
         <div>
           <VideoPlayer videoUrl={videoURL} />
+          <Slider />
         </div>
         <div className={style.secondflex}>
           <Typography

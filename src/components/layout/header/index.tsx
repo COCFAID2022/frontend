@@ -61,6 +61,15 @@ export const Header = () => (
       </Link>
     </nav>
 
+    {/* <Link href={'/history'}>
+      <Typography
+        fontWeight={'semiBold'}
+        element={'h7'}
+        className={styles.link}>
+        tmp
+      </Typography>
+    </Link> */}
+
     <LangSwitcher />
 
     <div className={styles.buttonTel}>
