@@ -21,7 +21,13 @@ export const Help = () => {
       <Border className={styles.border} />
       <div className={styles.cards}>
         {helpItems.map(item => {
-          return <Card className={styles.card} key={item.id} data={item} />;
+          return (
+            <Card
+              className={{ wrapper: styles.card }}
+              key={item.id}
+              data={item}
+            />
+          );
         })}
       </div>
     </section>
