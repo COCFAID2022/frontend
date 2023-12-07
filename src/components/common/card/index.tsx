@@ -13,16 +13,20 @@ import styles from './cart.module.scss';
 
 interface CardProps {
   data: TypeCardData;
-  className?: string;
+  className?: {
+    wrapper?: string;
+    title?: string;
+    description?: string;
+  };
   progress?: boolean;
   ended?: boolean;
 }
 
 export const Card: FC<CardProps> = props => {
-  const { progress = false, className = '', data, ended = false } = props;
+  const { progress = false, className, data, ended = false } = props;
   const { collectingMoney, info, links } = data;
   return (
-    <div className={classNames(styles.cart, className)}>
+    <div className={classNames(styles.cart, className?.wrapper || '')}>
       <Image
         src={info.image}
         alt={'card image'}
@@ -33,13 +37,16 @@ export const Card: FC<CardProps> = props => {
       <Typography
         fontWeight={'semiBold'}
         element={'h5'}
-        className={styles.title}>
+        className={classNames(styles.title, className?.title || '')}>
         {info.title}
       </Typography>
       <Typography
         fontWeight={'regular'}
         element={'h6'}
-        className={styles.description}>
+        className={classNames(
+          styles.description,
+          className?.description || ''
+        )}>
         {info.description}
       </Typography>
 
