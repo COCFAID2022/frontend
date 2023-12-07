@@ -22,7 +22,12 @@ export const OurProjects = () => {
       <div className={styles.cards}>
         {ourProjectsItems.map(item => {
           return (
-            <Card className={styles.card} key={item.id} data={item} progress />
+            <Card
+              className={{ wrapper: styles.card }}
+              key={item.id}
+              data={item}
+              progress
+            />
           );
         })}
       </div>
