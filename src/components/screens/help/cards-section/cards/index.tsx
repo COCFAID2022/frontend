@@ -1,5 +1,6 @@
 import classNames from 'classnames';
-import { FC } from 'react';
+import { FC, useRef } from 'react';
+import { SwiperRef } from 'swiper/swiper-react';
 
 import { Card } from '@/components/common/card';
 import { TypeCardData } from '@/components/common/card/types';
@@ -17,8 +18,13 @@ interface CardsProps {
 
 export const Cards: FC<CardsProps> = props => {
   const { slider, items, progress = false, ended = false } = props;
-  const onClickPrevSlide = () => 1;
-  const onClickNextSlide = () => 1;
+  const sliderRef = useRef<SwiperRef>(null);
+  const onClickPrevSlide = () => {
+    sliderRef.current?.swiper.slidePrev();
+  };
+  const onClickNextSlide = () => {
+    sliderRef.current?.swiper.slideNext();
+  };
 
   return (
     <div
@@ -32,7 +38,7 @@ export const Cards: FC<CardsProps> = props => {
             onClickPrevSlide={onClickPrevSlide}
             onClickNextSlide={onClickNextSlide}
           />
-          <Slider items={items} progress={progress} />
+          <Slider sliderRef={sliderRef} items={items} progress={progress} />
         </div>
       ) : (
         items.map(item => {
