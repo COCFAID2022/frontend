@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
 
+import { Description } from '@/components/common/card/description';
 import { TypeCardData } from '@/components/common/card/types';
 import { Button } from '@/components/ui/button';
 import { ProgressLine } from '@/components/ui/progress-line';
@@ -17,6 +18,7 @@ interface CardProps {
     wrapper?: string;
     title?: string;
     description?: string;
+    image?: string;
   };
   progress?: boolean;
   ended?: boolean;
@@ -30,7 +32,7 @@ export const Card: FC<CardProps> = props => {
       <Image
         src={info.image}
         alt={'card image'}
-        className={classNames(styles.image, {
+        className={classNames(styles.image, className?.image || '', {
           [styles.ended]: ended,
         })}
       />
@@ -40,15 +42,7 @@ export const Card: FC<CardProps> = props => {
         className={classNames(styles.title, className?.title || '')}>
         {info.title}
       </Typography>
-      <Typography
-        fontWeight={'regular'}
-        element={'h6'}
-        className={classNames(
-          styles.description,
-          className?.description || ''
-        )}>
-        {info.description}
-      </Typography>
+      <Description description={info.description} />
 
       {collectingMoney?.progressPercent && progress && (
         <div>
