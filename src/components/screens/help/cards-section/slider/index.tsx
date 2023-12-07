@@ -28,7 +28,11 @@ export const Slider: FC<SliderProps> = props => {
       {items.map(item => {
         return (
           <SwiperSlide key={item.id} className={styles.slide}>
-            <Card progress={progress} data={item} className={styles.card} />
+            <Card
+              progress={progress}
+              data={item}
+              className={{ wrapper: styles.card }}
+            />
           </SwiperSlide>
         );
       })}
