@@ -3,7 +3,7 @@ import { Feedback } from './feedback';
 import { Header } from './header';
 import { OtherHistory } from './other-history';
 
-export const HistoryScreen = () => {
+export const SelectedHistoryScreen = () => {
   return (
     <>
       <Header />

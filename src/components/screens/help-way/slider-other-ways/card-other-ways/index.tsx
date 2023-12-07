@@ -67,7 +67,11 @@ export const OtherWays: FC<CardsProps> = props => {
           {items.map((item, index) => (
             // eslint-disable-next-line react/no-array-index-key
             <SwiperSlide key={index}>
-              <Card progress={progress} data={item} className={style.card} />
+              <Card
+                progress={progress}
+                data={item}
+                className={{ wrapper: style.card }}
+              />
             </SwiperSlide>
           ))}
         </Swiper>

@@ -20,7 +20,6 @@ interface DirectionSliderProps {
 export const Direction: FC<DirectionSliderProps> = () => (
   <section className={classNames(styles.direction, 'container')}>
     <div className={styles.flexContainer}>
-      {' '}
       <div className={styles.directionLeft}>
         <Typography
           fontWeight={'semiBold'}
