@@ -1,4 +1,4 @@
-import { useLayoutEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 type MatchMediaValues = {
   isMobile: boolean;
@@ -22,16 +22,24 @@ const getValues = (mediaQueryLists: MediaQueryList[]): MatchMediaValues => ({
 });
 
 export const useMatchMedia = (): MatchMediaValues => {
-  const mediaQueryLists = queries.map(query => matchMedia(query));
-  const [values, setValues] = useState<MatchMediaValues>(() =>
-    getValues(mediaQueryLists)
-  );
+  const [values, setValues] = useState<MatchMediaValues>({
+    isMobile: false,
+    isTablet: false,
+    isLaptop: false,
+    isDesktop: false,
+  });
 
-  useLayoutEffect(() => {
+  useEffect(() => {
+    const isClient = typeof window !== 'undefined';
+    if (!isClient) return;
+
+    const mediaQueryLists = queries.map(query => window.matchMedia(query));
+
     const handler = () => setValues(getValues(mediaQueryLists));
 
     mediaQueryLists.forEach(list => list.addEventListener('change', handler));
 
+    // eslint-disable-next-line consistent-return
     return () =>
       mediaQueryLists.forEach(list =>
         list.removeEventListener('change', handler)
