@@ -11,19 +11,6 @@ interface SliderProps {
   progress: boolean;
 }
 
-// breakpoints={{
-//     0: {
-//         slidesPerView: 1,
-//     },
-//     480: {
-//         slidesPerView: 2,
-//             spaceBetween: 15,
-//     },
-//     768: {
-//         slidesPerView: 3,
-//     },
-// }}
-
 export const Slider: FC<SliderProps> = props => {
   const { items, progress } = props;
   return (

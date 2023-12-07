@@ -15,6 +15,10 @@ export const HomeScreen = () => (
     <OurProjects />
     <News />
     <Question />
-    <Consultation />
+    <Consultation
+      title={' Потрібна консультація?'}
+      secondTitle={'Наші менеджери завжди раді Вам допомогти'}
+      addBtn={false}
+    />
   </>
 );

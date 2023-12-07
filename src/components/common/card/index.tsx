@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
 
+import { Description } from '@/components/common/card/description';
 import { TypeCardData } from '@/components/common/card/types';
 import { Button } from '@/components/ui/button';
 import { ProgressLine } from '@/components/ui/progress-line';
@@ -13,35 +14,35 @@ import styles from './cart.module.scss';
 
 interface CardProps {
   data: TypeCardData;
-  className?: string;
+  className?: {
+    wrapper?: string;
+    title?: string;
+    description?: string;
+    image?: string;
+  };
   progress?: boolean;
   ended?: boolean;
 }
 
 export const Card: FC<CardProps> = props => {
-  const { progress = false, className = '', data, ended = false } = props;
+  const { progress = false, className, data, ended = false } = props;
   const { collectingMoney, info, links } = data;
   return (
-    <div className={classNames(styles.cart, className)}>
+    <div className={classNames(styles.cart, className?.wrapper || '')}>
       <Image
         src={info.image}
         alt={'card image'}
-        className={classNames(styles.image, {
+        className={classNames(styles.image, className?.image || '', {
           [styles.ended]: ended,
         })}
       />
       <Typography
         fontWeight={'semiBold'}
         element={'h5'}
-        className={styles.title}>
+        className={classNames(styles.title, className?.title || '')}>
         {info.title}
       </Typography>
-      <Typography
-        fontWeight={'regular'}
-        element={'h6'}
-        className={styles.description}>
-        {info.description}
-      </Typography>
+      <Description description={info.description} />
 
       {collectingMoney?.progressPercent && progress && (
         <div>

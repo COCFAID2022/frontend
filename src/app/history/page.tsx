@@ -1,5 +1,7 @@
-import { HistoryScreen } from '@/components/screens/history';
-
-export default function DescriprionPage() {
-  return <HistoryScreen />;
+export default function DescriptionPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  return <div>History page {params.slug}</div>;
 }

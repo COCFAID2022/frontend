@@ -41,7 +41,7 @@ export const Cards: FC<CardsProps> = props => {
               key={item.id}
               data={item}
               progress={progress}
-              className={styles.card}
+              className={{ wrapper: styles.card }}
               ended={ended}
             />
           );
