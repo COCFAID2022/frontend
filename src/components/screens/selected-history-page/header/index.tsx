@@ -8,11 +8,11 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ProgressLine } from '@/components/ui/progress-line';
 import { Typography } from '@/components/ui/typography';
+import buttonIconLight from '@/icons/arrowTopRightLight.svg';
+import heard from '@/icons/Vector.svg';
 
-import buttonIconLight from '../../../../../public/static/icons/arrowTopRightLight.svg';
-import heard from '../../../../../public/static/icons/Vector.svg';
-import { Slider } from '../slider';
 import style from './header.module.scss';
+import { Slider } from './slider';
 import { VideoPlayer } from './video-player/VideoPlayer';
 
 export const Header = () => {
