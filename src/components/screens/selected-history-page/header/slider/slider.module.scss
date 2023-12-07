@@ -1,0 +1,49 @@
+@import 'main-breakpoints';
+
+.sliderWrapper {
+  // width: 652px;
+  margin-bottom: 68px;
+
+  @include tablet {
+    // width: 100%;
+    margin-bottom: 64px;
+  }
+}
+
+.navButtons {
+  margin-top: 12px;
+}
+
+.slide {
+  width: 1;
+  max-width: 148px;
+
+  @include mobile {
+    max-width: 100px;
+  }
+}
+
+.link {
+  padding: 20px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid var(--secondaryGreyColor3);
+  border-radius: 6px;
+
+  @include mobile {
+    padding: 15px 20px;
+  }
+}
+
+.image {
+  width: 85px;
+  height: 65px;
+  object-fit: cover;
+
+  @include mobile {
+    width: 58px;
+    height: 45px;
+  }
+}
