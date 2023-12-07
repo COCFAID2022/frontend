@@ -1,6 +1,6 @@
 import { StaticImageData } from 'next/image';
 
-import DefaultPhoto from '../../../../../public/static/images/stub_photo.png';
+import DefaultPhoto from '@/images/stub_photo.png';
 
 type TypeSliderItems = {
   image: StaticImageData;
