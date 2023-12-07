@@ -14,43 +14,51 @@ type TypeSliderItems = {
 
 const sliderItems: TypeSliderItems[] = [
   {
-    href: '/privat',
+    href: '/1',
     image: PrivatBankPoster,
   },
   {
-    href: '/def1',
+    href: '/2',
     image: DefaultPhoto,
   },
   {
-    href: '/def2',
+    href: '/3',
     image: DefaultPhoto,
   },
   {
-    href: '/def3',
+    href: '/4',
     image: DefaultPhoto,
   },
   {
-    href: '/def4',
+    href: '/5',
     image: DefaultPhoto,
   },
   {
-    href: '/def5',
+    href: '/6',
     image: DefaultPhoto,
   },
   {
-    href: '/def6',
+    href: '/7',
     image: DefaultPhoto,
   },
   {
-    href: '/def12',
+    href: '/8',
     image: DefaultPhoto,
   },
   {
-    href: '/def23',
+    href: '/9',
     image: DefaultPhoto,
   },
   {
-    href: '/def111',
+    href: '/10',
+    image: DefaultPhoto,
+  },
+  {
+    href: '/11',
+    image: DefaultPhoto,
+  },
+  {
+    href: '/12',
     image: DefaultPhoto,
   },
 ];
@@ -67,12 +75,13 @@ export const Slider: FC<SliderProps> = props => {
       ref={sliderRef}
       className={styles.slider}
       slidesPerView={6}
+      loop
+      spaceBetween={24}
       breakpoints={{
-        0: { slidesPerView: 'auto', loop: true, spaceBetween: 10 },
-        480: { slidesPerView: 'auto', loop: true, spaceBetween: 15 },
-        768: { slidesPerView: 'auto', loop: true, spaceBetween: 24 },
-      }}
-      spaceBetween={24}>
+        0: { slidesPerView: 'auto', spaceBetween: 10 },
+        480: { slidesPerView: 'auto', spaceBetween: 15 },
+        768: { slidesPerView: 'auto', spaceBetween: 24 },
+      }}>
       {sliderItems.map(item => {
         return (
           <SwiperSlide key={item.href} className={styles.slide}>
