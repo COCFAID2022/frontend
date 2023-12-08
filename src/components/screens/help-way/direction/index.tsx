@@ -67,7 +67,7 @@ export const Direction: FC<DirectionSliderProps> = () => (
             }}
             value={{
               text: 'Підтримати',
-              color: 'blue',
+              color: 'blackText',
               fontWeight: 'semiBold',
               element: 'h7',
             }}
@@ -76,7 +76,7 @@ export const Direction: FC<DirectionSliderProps> = () => (
             variant={'outlined'}
             value={{
               element: 'h7',
-              color: 'black',
+              color: 'blackText',
               text: 'Стати партнером',
               fontWeight: 'semiBold',
             }}

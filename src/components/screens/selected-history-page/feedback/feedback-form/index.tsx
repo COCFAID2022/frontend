@@ -48,7 +48,7 @@ export function FeedbackForm() {
           text: 'Залишити відгук',
           element: 'h7',
           fontWeight: 'semiBold',
-          color: 'black',
+          color: isForm ? 'grayText' : 'blackText',
         }}
       />
 
@@ -94,7 +94,7 @@ export function FeedbackForm() {
                 text: 'Відправити',
                 element: 'h7',
                 fontWeight: 'semiBold',
-                color: 'black',
+                color: 'blackText',
               }}
             />
 
@@ -112,7 +112,7 @@ export function FeedbackForm() {
                 text: 'Відміна',
                 element: 'h7',
                 fontWeight: 'semiBold',
-                color: 'black',
+                color: 'blackText',
               }}
             />
           </div>

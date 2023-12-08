@@ -32,14 +32,14 @@ export const Consultation = () => (
             text: '050 612 45 68',
             fontWeight: 'semiBold',
             element: 'h7',
-            color: 'black',
+            color: 'blackText',
           }}
         />
         <Button
           variant={'outlined'}
           value={{
             element: 'h7',
-            color: 'black',
+            color: 'blackText',
             text: 'Підтримати',
             fontWeight: 'semiBold',
           }}
