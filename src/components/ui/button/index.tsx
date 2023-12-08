@@ -2,7 +2,7 @@
 
 import classNames from 'classnames';
 import Image from 'next/image';
-import { FC } from 'react';
+import { FC, MouseEvent } from 'react';
 
 import { Typography } from '@/components/ui/typography';
 import {
@@ -13,6 +13,7 @@ import {
 import styles from './button.module.scss';
 
 interface ButtonProps {
+  onClick?: (e: MouseEvent<HTMLButtonElement>) => void;
   buttonType?: 'button' | 'submit';
   variant: 'outlined' | 'default';
   value?: {
@@ -27,12 +28,20 @@ interface ButtonProps {
   icon: {
     position: 'left' | 'right';
     image: string;
-    variant: 'blue' | 'black';
+    variant: 'blue' | 'black' | 'gray';
   };
 }
 
 export const Button: FC<ButtonProps> = props => {
-  const { icon, buttonType = 'button', size, label, variant, value } = props;
+  const {
+    onClick,
+    icon,
+    buttonType = 'button',
+    size,
+    label,
+    variant,
+    value,
+  } = props;
 
   const iconClasses = classNames(
     styles.iconWrapper,
@@ -48,6 +57,7 @@ export const Button: FC<ButtonProps> = props => {
 
   return (
     <button
+      onClick={onClick}
       type={buttonType === 'submit' ? 'submit' : 'button'}
       className={classNames(
         styles.button,

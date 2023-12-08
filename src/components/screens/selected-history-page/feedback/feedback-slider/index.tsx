@@ -6,9 +6,7 @@ import { FC, useEffect, useRef, useState } from 'react';
 import { Swiper, SwiperRef, SwiperSlide } from 'swiper/react';
 
 import { SliderNavigationButtons } from '@/components/common/slider-navigation-buttons';
-import { Button } from '@/components/ui/button';
 
-import arrowRightLight from '../../../../../../public/static/icons/arrowTopRightLight.svg';
 import { CardSlider } from '../card-slider/cardSlider';
 import { FeedbackType } from '../types/feedbackType';
 import style from './feedbackSlider.module.scss';
@@ -65,23 +63,6 @@ export const FeedbackSlider: FC<FeedbackSliderProps> = ({ data }) => {
           </SwiperSlide>
         ))}
       </Swiper>
-
-      <Button
-        buttonType={'button'}
-        variant={'outlined'}
-        size={'sm'}
-        icon={{
-          variant: 'blue',
-          image: arrowRightLight,
-          position: 'left',
-        }}
-        value={{
-          text: 'Залишити відгук',
-          element: 'h7',
-          fontWeight: 'semiBold',
-          color: 'black',
-        }}
-      />
     </>
   );
 };
