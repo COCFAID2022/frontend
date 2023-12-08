@@ -2,7 +2,7 @@
   position: relative;
 
   margin-top: var(--xl3Spacing);
-  padding: 0 16px;
+  padding: 0 var(--xsSpacing);
 
   @media (width >= 768px) {
     padding: 0 44px;

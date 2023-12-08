@@ -1,14 +1,14 @@
 .swiperContainer {
   display: flex;
-  gap: 16px;
+  gap: var(--xsSpacing);
 
   flex-direction: column;
 
-  margin-bottom: 32px;
+  margin-bottom: var(--mdSpacing);
 
   @media (width >= 768px) {
     display: flex;
-    gap: 32px;
+    gap: var(--mdSpacing);
 
     flex-direction: column;
   }
