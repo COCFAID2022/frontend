@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Підключення Bootstrap CSS з CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Your Page Title</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;0,600;0,700;1,600&display=swap');
+</style>
+
+<body>    
+    <header class="header_main open" id="header">
+
+            <div class="container_padding"></div>
+
+            <div class="header_container">
+                <img src="./img/logo.png" width="62px;" height="71px;" alt="img" class="header_logo" />
+
+
+
+                <button class="header_burger" id="header_burger" onclick="onClick()" style="z-index: 4;">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <nav class="nav_style visible" id="menu">
+                        <a href="#" class="item nav_about visible">Про нас</a>
+                        <a href="#" class="item our_project">Наші проекти</a>
+                        <a href="#" class="item how_help">Як допомогти</a>
+                        <a href="#" class="item news">Новини</a>
+                        <a href="#" class="item study">Навчання</a>
+
+                        <button class="button_header visible" id="menu2" onclick="addButton()">
+                            <a href="#">
+                                <div class="styled-block">
+                                    <div class="hotline" id="h7r">Гаряча лінія</div>
+                                    <div class="number_button">050 612 45 68</div>
+                                </div>
+                                <div class="button_content">
+                                    <i>
+                                        <img src="./img/Vector.svg" alt="img" 
+                                            class="icon_container" />
+                                    </i>
+                                </div>
+                            </a>
+                        </button>
+
+
+                    </nav>
+                </button>
+
+                <nav class="nav_style" id="menu">
+                    <a href="#" class="item nav_about visible">Про нас</a>
+                    <a href="#" class="item our_project">Наші проекти</a>
+                    <a href="#" class="item how_help">Як допомогти</a>
+                    <a href="#" class="item news">Новини</a>
+                    <a href="#" class="item study">Навчання</a>
+
+            
+                </nav>
+
+        
+
+                <div class="language_container">
+                    <a href="#" class="language_url UA">UA</a>
+                    <img src="./img/border.png" alt="img" width="1px;" height="15px;" class="border_language">
+                    <a href="#" class="language_url EN">EN</a>
+                </div>
+
+
+                <div class="container_button">
+                    <button class="button_header">
+                        <a href="#">
+                            <div class="styled-block">
+                                <div class="hotline" id="h7r">Гаряча лінія</div>
+                                <div class="number_button">050 612 45 68</div>
+                            </div>
+                            <div class="button_content">
+                                <i>
+                                    <img src="./img/Vector.svg" alt="img" height="14px" width="14px"
+                                        class="icon_container" />
+                                </i>
+                            </div>
+                        </a>
+                    </button>
+
+
+
+                    <button class="button_headerLast">
+                        <a href="#">
+                            <div class="styled-block">
+                                <div class="number_button2">Підтримати</div>
+                            </div>
+                            <div class="button_content">
+                                <i>
+                                    <img src="./img/Support.svg" alt="img" height="224px" width="24px"
+                                        class="icon_container2" />
+                                </i>
+
+                            </div>
+                        </a>
+                    </button>
+
+
+                </div>
+
+            </div>
+            <div class="custom-border-container"></div>
+    </header>
+
+    <script>
+     document.addEventListener('DOMContentLoaded', function () {
+    var header = document.getElementById('header');
+    var headerH = header.clientHeight;
+
+    var scrollPos = window.scrollY;
+
+    window.addEventListener('scroll', function () {
+        scrollPos = window.scrollY;
+        if (scrollPos > headerH) {
+            header.classList.add('fixed');
+        } else {
+            header.classList.remove('fixed');
+        }
+    });
+
+    window.addEventListener('resize', function () {
+        headerH = header.clientHeight;
+       
+    });
+});
+    </script>
+
+
+
+    <script>
+        function onClick() {
+            var menu = document.getElementById('menu');
+            menu.classList.toggle('visible');
+        }
+
+        document.getElementById('header_burger').addEventListener('click', function (event) {
+            event.stopPropagation();
+        });
+
+        document.addEventListener('click', function (event) {
+            var menu = document.getElementById('menu');
+            if (!menu.contains(event.target)) {
+                menu.classList.remove('visible');
+            }
+        });
+    
+    </script>
+
+
+    <div id="block_img" class="container_block">
+        <div class="header_main2">
+            <img src="./img/Блок спонсори.svg" alt="img" height="447px" width="100" class="img_sponsor_block" />
+            <div class="container_img">
+                <div class="hover-text">
+                    <h1 class="img_Maintitle">Поміч 2022 </h1>
+                    <h4 class="img_title">Благодійний фонд</h4>
+                    <div class="text_content">
+                        <div class="block_text">Зробіть крок до підтримки наших військових. Приєднуйтесь до нашого
+                            благодійного фонду та підтримайте тих, хто захищає нас усіх!</div>
+                        <button class="button_header3">
+                            <a href="#">
+                                <div class="styled-block">
+                                    <div class="number_button3">Стати спонсором</div>
+                                </div>
+                                <div class="button_content">
+                                    <i>
+                                        <img src="./img/Support.svg" alt="img" height="24px" width="24px"
+                                            class="icon_container" />
+                                    </i>
+                                </div>
+                            </a>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <div class="sponsor_text">Спонсори</div>
+    <div class="sponsor_container">
+    </div>
+ 
+    <div class="sponsor_mainContainer">
+        <div class="sponsor_block">
+            <img src="./img/Rectangle.png" width="344px" height="172" class="sponsor_img" />
+            <div class="sponsor_title">Нагальні потреби медзакладів</div>
+            <div class="sponsor_Maintext">Медикаменти та обладнання для забезпечення нагальних потреб медзакладів на
+                деокупованих та прифронтових територіях</div>
+            <button class="button_header4">
+                <a href="#">
+                    <div class="styled-block">
+                    </div>
+                    <div class="button_contentColor">
+                        <i>
+                            <img src="./img/Support.svg" alt="img" height="24px" width="24px" class="icon_container" />
+                        </i>
+                    </div>
+                </a>
+                <span class="number_button4">Детальніше</span>
+            </button>
+        </div>
+        <div class="sponsor_block2">
+            <img src="./img/Rectangle.png" width="344px" height="172" class="sponsor_img" />
+            <div class="sponsor_title">Нагальні потреби медзакладів</div>
+            <div class="sponsor_Maintext">Медикаменти та обладнання для забезпечення нагальних потреб медзакладів на
+                деокупованих та прифронтових територіях</div>
+            <button class="button_header4">
+                <a href="#">
+                    <div class="styled-block">
+                    </div>
+                    <div class="button_contentColor">
+                        <i>
+                            <img src="./img/Support.svg" alt="img" height="24px" width="24px" class="icon_container" />
+                        </i>
+                    </div>
+                </a>
+                <span class="number_button4">Детальніше</span>
+            </button>
+        </div>
+        <div class="sponsor_block3">
+            <img src="./img/Rectangle.png" width="344px" height="172" class="sponsor_img" />
+            <div class="sponsor_title">Нагальні потреби медзакладів</div>
+            <div class="sponsor_Maintext">Медикаменти та обладнання для забезпечення нагальних потреб медзакладів на
+                деокупованих та прифронтових територіях</div>
+            <button class="button_header4">
+                <a href="#">
+                    <div class="styled-block">
+                    </div>
+                    <div class="button_contentColor">
+                        <i>
+                            <img src="./img/Support.svg" alt="img" height="24px" width="24px" class="icon_container" />
+                        </i>
+                    </div>
+                </a>
+                <span class="number_button4">Детальніше</span>
+            </button>
+        </div>
+
+
+        <div class="sponsor_block4">
+            <img src="./img/Rectangle.png" width="344px" height="172" class="sponsor_img" />
+            <div class="sponsor_title">Нагальні потреби медзакладів</div>
+            <div class="sponsor_Maintext">Медикаменти та обладнання для забезпечення нагальних потреб медзакладів на
+                деокупованих та прифронтових територіях</div>
+            <button class="button_header4">
+                <a href="#">
+                    <div class="styled-block">
+                    </div>
+                    <div class="button_contentColor">
+                        <i>
+                            <img src="./img/Support.svg" alt="img" height="24px" width="24px" class="icon_container" />
+                        </i>
+                    </div>
+                </a>
+                <span class="number_button4">Детальніше</span>
+            </button>
+        </div>
+
+
+        <div class="sponsor_block5">
+            <img src="./img/Rectangle.png" width="344px" height="172" class="sponsor_img" />
+            <div class="sponsor_title">Нагальні потреби медзакладів</div>
+            <div class="sponsor_Maintext">Медикаменти та обладнання для забезпечення нагальних потреб медзакладів на
+                деокупованих та прифронтових територіях</div>
+            <button class="button_header4">
+                <a href="#">
+                    <div class="styled-block">
+                    </div>
+                    <div class="button_contentColor">
+                        <i>
+                            <img src="./img/Support.svg" alt="img" height="24px" width="24px" class="icon_container" />
+                        </i>
+                    </div>
+                </a>
+                <span class="number_button4">Детальніше</span>
+            </button>
+        </div>
+
+        <div class="sponsor_block6">
+            <img src="./img/Rectangle.png" width="344px" height="172" class="sponsor_img" />
+            <div class="sponsor_title">Нагальні потреби медзакладів</div>
+            <div class="sponsor_Maintext">Медикаменти та обладнання для забезпечення нагальних потреб медзакладів на
+                деокупованих та прифронтових територіях</div>
+            <button class="button_header4">
+                <a href="#">
+                    <div class="styled-block">
+                    </div>
+                    <div class="button_contentColor">
+                        <i>
+                            <img src="./img/Support.svg" alt="img" height="24px" width="24px" class="icon_container" />
+                        </i>
+                    </div>
+                </a>
+                <span class="number_button4">Детальніше</span>
+            </button>
+        </div>
+
+
+        <div class="sponsor_block7">
+            <img src="./img/Rectangle.png" width="344px" height="172" class="sponsor_img" />
+            <div class="sponsor_title">Нагальні потреби медзакладів</div>
+            <div class="sponsor_Maintext">Медикаменти та обладнання для забезпечення нагальних потреб медзакладів на
+                деокупованих та прифронтових територіях</div>
+            <button class="button_header4">
+                <a href="#">
+                    <div class="styled-block">
+                    </div>
+                    <div class="button_contentColor">
+                        <i>
+                            <img src="./img/Support.svg" alt="img" height="24px" width="24px" class="icon_container" />
+                        </i>
+                    </div>
+                </a>
+                <span class="number_button4">Детальніше</span>
+            </button>
+        </div>
+
+        <div class="sponsor_block8">
+            <img src="./img/Rectangle.png" width="344px" height="172" class="sponsor_img" />
+            <div class="sponsor_title">Нагальні потреби медзакладів</div>
+            <div class="sponsor_Maintext">Медикаменти та обладнання для забезпечення нагальних потреб медзакладів на
+                деокупованих та прифронтових територіях</div>
+            <button class="button_header4">
+                <a href="#">
+                    <div class="styled-block">
+                    </div>
+                    <div class="button_contentColor">
+                        <i>
+                            <img src="./img/Support.svg" alt="img" height="24px" width="24px" class="icon_container" />
+                        </i>
+                    </div>
+                </a>
+                <span class="number_button4">Детальніше</span>
+            </button>
+        </div>
+
+
+        <div class="sponsor_block9">
+            <img src="./img/Rectangle.png" width="344px" height="172" class="sponsor_img" />
+            <div class="sponsor_title">Нагальні потреби медзакладів</div>
+            <div class="sponsor_Maintext">Медикаменти та обладнання для забезпечення нагальних потреб медзакладів на
+                деокупованих та прифронтових територіях</div>
+            <button class="button_header4">
+                <a href="#">
+                    <div class="styled-block">
+                    </div>
+                    <div class="button_contentColor">
+                        <i>
+                            <img src="./img/Support.svg" alt="img" height="24px" width="24px" class="icon_container" />
+                        </i>
+                    </div>
+                </a>
+                <span class="number_button4">Детальніше</span>
+            </button>
+        </div>
+
+
+        <div class="sponsor_block10">
+            <img src="./img/Rectangle.png" width="344px" height="172" class="sponsor_img" />
+            <div class="sponsor_title">Нагальні потреби медзакладів</div>
+            <div class="sponsor_Maintext">Медикаменти та обладнання для забезпечення нагальних потреб медзакладів на
+                деокупованих та прифронтових територіях</div>
+            <button class="button_header4">
+                <a href="#">
+                    <div class="styled-block">
+                    </div>
+                    <div class="button_contentColor">
+                        <i>
+                            <img src="./img/Support.svg" alt="img" height="24px" width="24px" class="icon_container" />
+                        </i>
+                    </div>
+                </a>
+                <span class="number_button4">Детальніше</span>
+            </button>
+        </div>
+
+
+        <div class="sponsor_block11">
+            <img src="./img/Rectangle.png" width="344px" height="172" class="sponsor_img" />
+            <div class="sponsor_title">Нагальні потреби медзакладів</div>
+            <div class="sponsor_Maintext">Медикаменти та обладнання для забезпечення нагальних потреб медзакладів на
+                деокупованих та прифронтових територіях</div>
+            <button class="button_header4">
+                <a href="#">
+                    <div class="styled-block">
+                    </div>
+                    <div class="button_contentColor">
+                        <i>
+                            <img src="./img/Support.svg" alt="img" height="24px" width="24px" class="icon_container" />
+                        </i>
+                    </div>
+                </a>
+                <span class="number_button4">Детальніше</span>
+            </button>
+        </div>
+
+        <div class="sponsor_block12">
+            <img src="./img/Rectangle.png" width="344px" height="172" class="sponsor_img" />
+            <div class="sponsor_title">Нагальні потреби медзакладів</div>
+            <div class="sponsor_Maintext">Медикаменти та обладнання для забезпечення нагальних потреб медзакладів на
+                деокупованих та прифронтових територіях</div>
+            <button class="button_header4">
+                <a href="#">
+                    <div class="styled-block">
+                    </div>
+                    <div class="button_contentColor">
+                        <i>
+                            <img src="./img/Support.svg" alt="img" height="24px" width="24px" class="icon_container" />
+                        </i>
+                    </div>
+                </a>
+                <span class="number_button4">Детальніше</span>
+            </button>
+        </div>
+      
+    </div>
+
+
+
+
+    
+
+    <div id="parthner">
+        <div class="block_parthner">
+            <div class="style_parthner">Партнери</div>
+        </div>
+
+        <div class="flex_parthner">
+            <div class="container_parthner">
+                <div class="contant_partner">
+                    <img src="./img/Parthner.png" alt="img" class="parthner_img"/>
+                </div>
+            </div>
+
+            <div class="container_parthner">
+                <div class="contant_partner2">
+                    <img src="./img/Parthner.png" alt="img"class="parthner_img" />
+                </div>
+            </div>
+
+            <div class="container_parthner">
+                <div class="contant_partner3">
+                    <img src="./img/Parthner.png" alt="img" class="parthner_img"/>
+                </div>
+            </div>
+
+            <div class="container_parthner">
+                <div class="contant_partner4">
+                    <img src="./img/Parthner.png" alt="img" class="parthner_img"/>
+                </div>
+            </div>
+
+            <div class="container_parthner">
+                <div class="contant_partner5">
+                    <img src="./img/Parthner.png" alt="img" class="parthner_img"/>
+                </div>
+            </div>
+
+            <div class="container_parthner">
+                <div class="contant_partner6">
+                    <img src="./img/Parthner.png" alt="img" class="parthner_img"/>
+                </div>
+            </div>
+
+            <div class="container_parthner">
+                <div class="contant_partner7">
+                    <img src="./img/Parthner.png" alt="img" class="parthner_img"/>
+                </div>
+            </div>
+
+
+            <div class="container_parthner">
+                <div class="contant_partner8">
+                    <img src="./img/Parthner.png" alt="img" class="parthner_img"/>
+                </div>
+            </div>
+
+
+            <div class="container_parthner">
+                <div class="contant_partner9">
+                    <img src="./img/Parthner.png" alt="img" class="parthner_img"/>
+                </div>
+            </div>
+
+            <div class="container_parthner">
+                <div class="contant_partner10">
+                    <img src="./img/Parthner.png" alt="img" class="parthner_img"/>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+    <div id="footer">
+        <div class="footer_block">
+            <footer class="footer_container">
+                <div class="logo_container">
+                    <img src="./img/logo.png" width="62px;" height="71px;" alt="img" alt="img" class="logo_img" />
+                    <div class="logo_title">
+                        <div class="logo_style">Поміч 2022</div>
+                        <div class="logo_style2">Благодійний фонд</div>
+
+                    </div>
+                </div>
+
+
+                <div class="footer_containerText">
+                    <div class="footer_link">
+                        <a href="#" class="link_help">Допомога</a>
+                        <div class="padding_link">
+                            <a href="#" class="link_humanitarian_aid">Гуманітарна допомога</a>
+                            <a href="#" class="link_help_army">Допомога армії</a>
+                            <a href="#" class="link_project">Проекти<br /></a>
+                            <a href="#" class="link_main_question">Головні питання</a>
+                        </div>
+                    </div>
+                    <div class="footer_link2">
+                        <a href="#" class="link_partnership">Партнерство</a>
+                        <div class="padding_link">
+                            <a href="#" class="link_howbecome_partner">Як стати партнером</a>
+                            <a href="#" class="link_our_partner">Наші партнери</a>
+                            <a href="#" class="link_volunter">Волонтерство</br></a>
+                            <a href="#" class="link_how_join">Як долучитись</a>
+                        </div>
+                    </div>
+                    <div class="footer_link3">
+                        <a href="#" class="link_partnership">Про фонд</a>
+                        <div class="padding_link">
+                            <a href="#" class="link_howbecome_partner">Про нас</a>
+                            <a href="#" class="link_our_partner">Команда</a>
+                            <a href="#" class="link_volunter">Звітність</br></a>
+                            <a href="#" class="link_how_join">Документи</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="social_container">
+                    <div class="social_title">Соціальні мережі</div>
+                    <div class="social_contant">
+                        <div class="social_block">
+                            <a href="#">
+                                <i>
+                                    <img src="./img/Path.svg" class="social_link" />
+                                </i>
+                            </a>
+                            <i>
+                                <img src="./img/Shape.svg" class="social_link" style="margin-left:16px;" />
+                            </i>
+                            </a>
+                            <i>
+                                <img src="./img/Twitter.svg" class="social_link" style="margin-left:16px;" />
+                            </i>
+                            </a>
+                            <i>
+                                <img src="./img/Youtube.svg" class="social_link" width="24px;"
+                                    style="margin-left:16px;" />
+                            </i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="footer_border"></div>
+                <div class="footer_date" style="padding-bottom: 130px;">© 2023 | All Rights Reserved</div>
+            </footer>
+        </div>
+
+    </div>
+
+
+
+
+    <!-- Підключення Bootstrap JS та Popper.js з CDN (необов'язково, залежить від ваших потреб) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
