@@ -1,0 +1,27 @@
+.sectionWithSlider {
+  margin-bottom: 100px;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 11px;
+}
+
+.filterWrapper {
+  position: relative;
+
+  align-self: flex-end;
+  flex-shrink: 0;
+}
+
+.title {
+  @media (width <= 480px) {
+    font-size: 24px;
+  }
+}
+
+.sliderBtns {
+  margin: 16px 0;
+}
