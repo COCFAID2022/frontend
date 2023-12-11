@@ -5,7 +5,6 @@ import { FC, useEffect, useState } from 'react';
 
 import { Typography } from '@/components/ui/typography';
 
-import { useMatchMedia } from '../../../../hooks/use-match-media';
 import styles from './description.module.scss';
 
 interface DescriptionProps {
@@ -15,20 +14,23 @@ interface DescriptionProps {
 
 export const Description: FC<DescriptionProps> = props => {
   const { description, className = '' } = props;
-  const { isMobile } = useMatchMedia();
+
   const [collapsed, setIsCollapsed] = useState(false);
 
-  const toggleCollapsed = () => {
-    if (isMobile) {
-      setIsCollapsed(!collapsed);
+  const updateCardsPerSlide = () => {
+    const screenWidth = window.innerWidth;
+    if (screenWidth <= 480) {
+      setIsCollapsed(true);
+    } else {
+      setIsCollapsed(false);
     }
   };
 
+  const toggleCollapsed = () => setIsCollapsed(!collapsed);
+
   useEffect(() => {
-    if (isMobile) {
-      setIsCollapsed(true);
-    }
-  }, [isMobile]);
+    updateCardsPerSlide();
+  }, []);
 
   return (
     <button type={'button'} onClick={toggleCollapsed}>
