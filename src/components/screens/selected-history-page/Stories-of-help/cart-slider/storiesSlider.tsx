@@ -54,7 +54,7 @@ export const StoriesSlider: FC<StorySliderProps> = ({ data }) => {
         onClickPrevSlide={onClickPrevSlide}
       />
       <Swiper
-        // direction={'horizontal'}
+        direction={'horizontal'}
         spaceBetween={'auto'}
         slidesPerView={1}
         breakpoints={{
