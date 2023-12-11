@@ -51,7 +51,7 @@ export const History = () => {
                         className: style.btn,
                         text: 'Детальніше',
                         fontWeight: 'semiBold',
-                        color: 'black',
+                        color: 'blackText',
                         element: 'h7',
                       }}
                       size={'sm'}
