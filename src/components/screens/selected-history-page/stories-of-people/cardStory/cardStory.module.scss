@@ -1,0 +1,80 @@
+.item {
+  @media screen and (min-width: 768px) {
+    min-width: 332px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    min-width: 528px;
+  }
+}
+
+.video {
+  padding-bottom: 32px;
+}
+
+.description {
+  display: flex;
+
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+
+  margin-bottom: 32px;
+  padding-bottom: 37px;
+
+  @media screen and (min-width: 768px) {
+    padding-bottom: 0;
+
+    gap: 16px;
+  }
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+  }
+}
+
+.text {
+  font-size: 14px;
+  line-height: 120%; /* 16.8px */
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+}
+
+.all_button_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.button_box {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @media screen and (min-width: 1440px) {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
+.like_message_box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.like_box,
+.message_box {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}

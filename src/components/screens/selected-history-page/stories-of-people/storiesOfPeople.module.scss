@@ -1,0 +1,46 @@
+.section {
+  margin-top: var(--xl3Spacing);
+  padding: 0 16px;
+
+  @media (min-width: 768px) {
+    padding: 0 44px;
+  }
+
+  @media (min-width: 1124px) {
+    padding: 0;
+  }
+}
+
+.title {
+  position: relative;
+
+  padding-bottom: var(--xsSpacing);
+  margin-bottom: var(--xsSpacing);
+
+  &::after {
+    content: '';
+    position: absolute;
+
+    bottom: 0;
+    right: 0;
+    height: 2px;
+    width: 100%;
+    border-radius: 60px;
+    opacity: 0.2;
+    background: var(--secondaryGreyColor3);
+  }
+}
+
+.title_first {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.title_second {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+}
