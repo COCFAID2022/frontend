@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FC, useState } from 'react';
+import { Typography } from '@/components/ui/typography';
 
 import { Button } from '@/components/ui/button';
 
@@ -45,8 +46,16 @@ export const CardStory: FC<CardProps> = ({
         </video>
       </div>
       <div className={style.description}>
-        <h2 className={style.title}>{title}</h2>
-        <p className={style.text}>{text}</p>
+        <Typography fontWeight={'bold'} element={'h5'} className={style.title}>
+          {title}
+        </Typography>
+        <Typography
+          fontWeight={'regular'}
+          type={'body'}
+          element={'h6'}
+          className={style.text}>
+          {text}
+        </Typography>
       </div>
       <div className={style.all_button_box}>
         <div className={style.button_box}>

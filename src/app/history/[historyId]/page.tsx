@@ -9,7 +9,7 @@ type Props = {
   historyId: string;
 };
 
-export default function SelectedHistoryPage() {
+export default function SelectedHistoryPage({ params }: { params: Props }) {
   const { historyId } = params;
   return (
     <>

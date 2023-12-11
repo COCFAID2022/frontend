@@ -52,7 +52,7 @@ export const StoriesSlider: FC<StorySliderProps> = ({ data }) => {
       />
       <Swiper
         direction={'horizontal'}
-        spaceBetween={1}
+        spaceBetween={'auto'}
         slidesPerView={'auto'}
         breakpoints={{
           0: { slidesPerView: 'auto' },
