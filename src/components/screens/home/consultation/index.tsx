@@ -51,7 +51,7 @@ export const Consultation: FC<ConsultationProps> = props => {
             value={{
               element: 'h7',
               fontWeight: 'semiBold',
-              color: 'blue',
+              color: 'blackText',
               text: '050 612 45 68',
             }}
           />
@@ -68,7 +68,7 @@ export const Consultation: FC<ConsultationProps> = props => {
                 text: 'Стати партнером',
                 fontWeight: 'semiBold',
                 element: 'h7',
-                color: 'black',
+                color: 'blackText',
               }}
             />
           )}
@@ -82,7 +82,7 @@ export const Consultation: FC<ConsultationProps> = props => {
             }}
             value={{
               text: 'Підтримати',
-              color: 'blue',
+              color: 'blackText',
               fontWeight: 'semiBold',
               element: 'h7',
             }}

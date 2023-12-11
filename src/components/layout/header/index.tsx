@@ -61,14 +61,15 @@ export const Header = () => (
       </Link>
     </nav>
 
-    {/* <Link href={'/history'}>
+    {/* temp */}
+    <Link href={'/history/temp'}>
       <Typography
         fontWeight={'semiBold'}
         element={'h7'}
         className={styles.link}>
         tmp
       </Typography>
-    </Link> */}
+    </Link>
 
     <LangSwitcher />
 
@@ -81,7 +82,7 @@ export const Header = () => (
         value={{
           element: 'h7',
           fontWeight: 'semiBold',
-          color: 'blue',
+          color: 'blackText',
           text: '050 612 45 68',
         }}
       />
@@ -97,7 +98,7 @@ export const Header = () => (
         }}
         value={{
           text: 'Підтримати',
-          color: 'blue',
+          color: 'blackText',
           fontWeight: 'semiBold',
           element: 'h7',
         }}

@@ -81,7 +81,7 @@ export const Header = () => {
                 value={{
                   text: 'Підтримати',
                   fontWeight: 'semiBold',
-                  color: 'black',
+                  color: 'blackText',
                   element: 'h7',
                 }}
                 size={'sm'}
@@ -104,7 +104,7 @@ export const Header = () => {
                 text: 'Стати партнером',
                 fontWeight: 'semiBold',
                 element: 'h7',
-                color: 'black',
+                color: 'blackText',
               }}
             />
           </div>

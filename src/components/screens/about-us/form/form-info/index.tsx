@@ -105,7 +105,7 @@ export const FormInfo = () => {
           text: 'Подати запит',
           element: 'h7',
           fontWeight: 'semiBold',
-          color: 'black',
+          color: 'blackText',
         }}
       />
     </form>

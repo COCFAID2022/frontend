@@ -42,7 +42,7 @@ export const Partners = () => {
           variant={'outlined'}
           value={{
             element: 'h7',
-            color: 'black',
+            color: 'blackText',
             text: 'Стати партнером',
             fontWeight: 'semiBold',
           }}
@@ -53,7 +53,7 @@ export const Partners = () => {
           variant={'outlined'}
           value={{
             element: 'h7',
-            color: 'black',
+            color: 'blackText',
             text: 'Усі партнери',
             fontWeight: 'semiBold',
           }}

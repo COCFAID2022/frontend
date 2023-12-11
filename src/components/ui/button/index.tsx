@@ -2,7 +2,7 @@
 
 import classNames from 'classnames';
 import Image from 'next/image';
-import { FC } from 'react';
+import { FC, MouseEvent } from 'react';
 
 import { Typography } from '@/components/ui/typography';
 import {
@@ -13,6 +13,7 @@ import {
 import styles from './button.module.scss';
 
 interface ButtonProps {
+  onClick?: (e: MouseEvent<HTMLButtonElement>) => void;
   buttonType?: 'button' | 'submit';
   variant: 'outlined' | 'default';
   value?: {
@@ -20,19 +21,27 @@ interface ButtonProps {
     className?: string;
     fontWeight: TypeHtmlFontWeight;
     element: TypeHtmlHeading;
-    color: 'blue' | 'black';
+    color: 'blueText' | 'blackText' | 'grayText';
   };
   size: 'sm' | 'md' | 'lg';
   label?: string;
   icon: {
     position: 'left' | 'right';
     image: string;
-    variant: 'blue' | 'black';
+    variant: 'blue' | 'black' | 'gray';
   };
 }
 
 export const Button: FC<ButtonProps> = props => {
-  const { icon, buttonType = 'button', size, label, variant, value } = props;
+  const {
+    onClick,
+    icon,
+    buttonType = 'button',
+    size,
+    label,
+    variant,
+    value,
+  } = props;
 
   const iconClasses = classNames(
     styles.iconWrapper,
@@ -43,11 +52,13 @@ export const Button: FC<ButtonProps> = props => {
   const valueClasses = classNames(
     styles.value,
     styles[size],
-    value?.className && value.className
+    value?.className || '',
+    value?.color ? styles[value.color] : ''
   );
 
   return (
     <button
+      onClick={onClick}
       type={buttonType === 'submit' ? 'submit' : 'button'}
       className={classNames(
         styles.button,
@@ -69,19 +80,18 @@ export const Button: FC<ButtonProps> = props => {
         <div className={styles.valueWithLabel}>
           <Typography
             fontWeight={'regular'}
-            element={'h7'}
+            element={'h8'}
             className={styles.label}>
             {label}
           </Typography>
           <Typography
             fontWeight={value.fontWeight}
             element={value.element}
-            className={styles.value}>
+            className={valueClasses}>
             {value.text}
           </Typography>
         </div>
       )}
-      {/* change */}
 
       {value && !label && (
         <Typography

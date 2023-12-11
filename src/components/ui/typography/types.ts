@@ -6,6 +6,7 @@ export type TypeHtmlHeading =
   | 'h5'
   | 'h6'
   | 'h7'
+  | 'h8'
   | 'p';
 
 export type TypeHtmlFontWeight = 'semiBold' | 'regular' | 'bold';

@@ -1,0 +1,61 @@
+@import 'main-breakpoints';
+
+.feedbackWrapper {
+  padding: 20px 20px 24px;
+
+  // & > button {
+  //   color: var(--secondaryGreyColor3);
+  // }
+}
+
+.form {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  margin-bottom: 32px;
+
+  @include mobile {
+    font-size: 24px;
+  }
+}
+
+%inputStyle {
+  padding: 10px 10px 10px 20px;
+
+  border-radius: 30px;
+  border: 1px solid var(--secondaryGreyColor1);
+
+  &::placeholder {
+    opacity: 0.6;
+  }
+}
+
+.name {
+  @extend %inputStyle;
+
+  width: 436px;
+  margin-bottom: 16px;
+
+  @include tablet {
+    width: 100%;
+  }
+}
+
+.feedback {
+  @extend %inputStyle;
+
+  margin-bottom: 32px;
+  resize: vertical;
+}
+
+.error {
+  color: tomato;
+}
+
+.buttonWraper {
+  display: flex;
+  gap: 38px;
+}
