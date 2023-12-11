@@ -5,6 +5,7 @@ import { OurProjects } from '@/components/screens/home/our-projects';
 import { Partners } from '@/components/screens/home/partners';
 
 import { Consultation } from './consultation';
+import { History } from './history-section/history';
 import { Question } from './question-section/question';
 
 export const HomeScreen = () => (
@@ -13,6 +14,7 @@ export const HomeScreen = () => (
     <Partners />
     <Help />
     <OurProjects />
+    <History />
     <News />
     <Question />
     <Consultation

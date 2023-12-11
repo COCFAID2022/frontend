@@ -1,56 +1,44 @@
-.blockHistoryCards {
-  flex-wrap: wrap;
-
-  margin-top: 32px;
+.wrapper {
+  overflow: hidden;
+  max-width: 1440px;
+  margin: var(--mdSpacing) auto;
 }
 
-.blockHistory {
-  margin-top: 32px;
+.border {
+  margin-top: var(--xsSpacing);
 }
 
-/* Progress bar */
-.progresBar {
-  display: flex;
-  flex-direction: column;
-  row-gap: 8px;
+.slider {
+  width: 713px;
+  overflow: visible !important;
+  position: relative;
 
-  &-header {
-    display: flex;
-    justify-content: space-between;
+  @media (max-width: 1024px) {
+    width: 550px;
   }
 
-  &__line {
-    position: relative;
-
-    width: 100%;
-    height: 5px;
-
-    opacity: 1;
-    border-radius: 6px;
-    background: #d4d1d1;
-
-    &::before {
-      position: absolute;
-      top: 0;
-      left: 0;
-
-      width: 50%;
-      height: 5px;
-
-      content: '';
-
-      opacity: 1;
-      border-radius: 6px;
-      background: #251add;
-    }
+  @media (max-width: 640px) {
+    width: auto;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
   }
+}
 
-  &-count {
-    &__item {
-      font-size: 16px;
-      font-weight: 400;
-      font-style: normal;
-      line-height: 19.2px;
-    }
+.wraperTitle {
+  position: absolute;
+  bottom: var(--xl5Spacing);
+  left: var(--smSpacing);
+  z-index: 10;
+}
+
+.titleVideo {
+  color: var(--defaultWhite);
+  margin-bottom: var(--xsSpacing);
+  @media (max-width: 640px) {
+    font-size: var(--mdSpacing);
   }
+}
+
+.btn {
+  color: var(--defaultWhite);
 }
