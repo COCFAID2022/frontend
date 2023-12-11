@@ -1,0 +1,32 @@
+.filter_box {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+
+  @media (min-width: 768px) {
+    top: 23px;
+    right: 44px;
+  }
+
+  @media (min-width: 1124px) {
+    right: 0;
+  }
+
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 10px;
+}
+
+.filter_title {
+  color: var(--defaultBlack);
+
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 16.8px */
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+  }
+}
