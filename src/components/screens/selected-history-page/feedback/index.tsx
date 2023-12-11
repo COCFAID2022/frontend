@@ -4,6 +4,7 @@ import { Typography } from '@/components/ui/typography';
 
 import style from './feedback.module.scss';
 import { feedbackData } from './feedback-data';
+import { FeedbackForm } from './feedback-form';
 import { FeedbackSlider } from './feedback-slider';
 
 export const Feedback = () => {
@@ -17,6 +18,8 @@ export const Feedback = () => {
       </Typography>
 
       <FeedbackSlider data={feedbackData} />
+
+      <FeedbackForm />
     </section>
   );
 };

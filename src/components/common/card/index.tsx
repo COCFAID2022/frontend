@@ -73,7 +73,7 @@ export const Card: FC<CardProps> = props => {
               value={{
                 text: 'Підтримати',
                 fontWeight: 'semiBold',
-                color: 'black',
+                color: 'blackText',
                 element: 'h7',
               }}
               size={'sm'}
@@ -92,7 +92,7 @@ export const Card: FC<CardProps> = props => {
             value={{
               text: 'Детальніше',
               fontWeight: 'semiBold',
-              color: 'black',
+              color: 'blackText',
               element: 'h7',
             }}
             size={'sm'}

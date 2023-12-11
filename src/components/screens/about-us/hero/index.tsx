@@ -41,7 +41,7 @@ export const Hero = () => (
             text: 'Підтримати',
             fontWeight: 'semiBold',
             element: 'h7',
-            color: 'black',
+            color: 'blackText',
           }}
         />
         <Button
@@ -57,7 +57,7 @@ export const Hero = () => (
             text: 'Стати партнером',
             fontWeight: 'semiBold',
             element: 'h7',
-            color: 'black',
+            color: 'blackText',
           }}
         />
       </div>

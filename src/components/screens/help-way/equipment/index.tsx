@@ -46,7 +46,7 @@ export const Equipment = () => (
         }}
         value={{
           text: 'Підтримати',
-          color: 'blue',
+          color: 'blackText',
           fontWeight: 'semiBold',
           element: 'h7',
         }}

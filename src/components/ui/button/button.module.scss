@@ -36,10 +36,11 @@
 
   .label {
     text-align: start;
+    margin-bottom: 4px;
   }
 
   .value {
-    padding: 0 10px 0 0;
+    padding: 0 10px 0 0 !important;
   }
 }
 
@@ -70,6 +71,10 @@
   background-color: var(--secondaryGreyColor1);
 }
 
+.gray {
+  background-color: var(--secondaryGreyColor3);
+}
+
 .blueColor {
   color: var(--primaryBlueColor2);
 }
@@ -80,4 +85,16 @@
 
 .value.md {
   padding: 13px 13px 13px 0;
+}
+
+.blueText {
+  color: var(--primaryBlueColor2) !important;
+}
+
+.blackText {
+  color: var(--secondaryGreyColor1) !important;
+}
+
+.grayText {
+  color: var(--secondaryGreyColor3);
 }
