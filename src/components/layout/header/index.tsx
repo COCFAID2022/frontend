@@ -61,16 +61,6 @@ export const Header = () => (
       </Link>
     </nav>
 
-    {/* temp */}
-    <Link href={'/history/temp'}>
-      <Typography
-        fontWeight={'semiBold'}
-        element={'h7'}
-        className={styles.link}>
-        tmp
-      </Typography>
-    </Link>
-
     <LangSwitcher />
 
     <div className={styles.buttonTel}>
@@ -110,3 +100,4 @@ export const Header = () => (
     </div>
   </header>
 );
+

@@ -1,3 +1,5 @@
+@import 'footer-breakpoints';
+
 .equipment {
   padding-top: 64px;
 
@@ -16,6 +18,12 @@
     flex-wrap: wrap;
     gap: 16px 13px;
 
+    @include desktop {
+      justify-content: space-between;
+    }
+
     margin-bottom: 32px;
+    outline: 1px solid tomato;
   }
 }
+
