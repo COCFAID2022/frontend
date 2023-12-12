@@ -1,6 +1,12 @@
 .title {
-  width: fit-content;
   padding: 15px 30px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  &:not(:last-of-type) {
+    flex-grow: 1;
+  }
 
   border: 1px solid #039cfd;
   border-radius: 8px;
@@ -9,3 +15,4 @@
     font-size: 14px;
   }
 }
+

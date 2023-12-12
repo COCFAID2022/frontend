@@ -16,14 +16,9 @@
   .wrap__equipment {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px 13px;
-
-    @include desktop {
-      justify-content: space-between;
-    }
+    gap: 16px 16px;
 
     margin-bottom: 32px;
-    outline: 1px solid tomato;
   }
 }
 
