@@ -1,0 +1,27 @@
+.slider {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 24px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  width: 300px;
+}
+
+.img {
+  width: 146px;
+  height: 96px;
+}
+
+.imgPrivat {
+  padding: 52px;
+
+  border: 1px solid black;
+  border-radius: 16px;
+}

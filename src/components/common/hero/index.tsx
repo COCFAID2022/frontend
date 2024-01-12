@@ -34,3 +34,4 @@ export const Hero = () => (
     <Image className={styles.image} src={logoHeart} alt={'heart'} />
   </section>
 );
+

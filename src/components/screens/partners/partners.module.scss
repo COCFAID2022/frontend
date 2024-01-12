@@ -1,0 +1,15 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  margin-bottom: 32px;
+
+  @media (width <= 820px) {
+    position: relative;
+  }
+
+  @media (width >= 769px) and (width <= 992px) {
+    gap: 30px;
+  }
+}
