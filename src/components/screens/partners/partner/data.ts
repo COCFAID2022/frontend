@@ -11,7 +11,9 @@ export const sponsorsData: TypeCardData[] = [
       title: '',
     },
     links: {
-      moreLink: '/',
+
+      moreLink: '/partners',
+
     },
   },
   {
@@ -22,7 +24,9 @@ export const sponsorsData: TypeCardData[] = [
       title: '',
     },
     links: {
-      moreLink: '/',
+
+      moreLink: '/partners',
+
     },
   },
   {
@@ -33,7 +37,9 @@ export const sponsorsData: TypeCardData[] = [
       title: '',
     },
     links: {
-      moreLink: '/',
+
+      moreLink: '/partners',
+
     },
   },
   {
@@ -44,7 +50,9 @@ export const sponsorsData: TypeCardData[] = [
       title: '',
     },
     links: {
-      moreLink: '/',
+
+      moreLink: '/partners',
+
     },
   },
   {
@@ -55,7 +63,9 @@ export const sponsorsData: TypeCardData[] = [
       title: '',
     },
     links: {
-      moreLink: '/',
+
+      moreLink: '/partners',
+
     },
   },
   {
@@ -66,7 +76,9 @@ export const sponsorsData: TypeCardData[] = [
       title: '',
     },
     links: {
-      moreLink: '/',
+
+      moreLink: '/partners',
+
     },
   },
   {
@@ -77,7 +89,9 @@ export const sponsorsData: TypeCardData[] = [
       title: '',
     },
     links: {
-      moreLink: '/',
+
+      moreLink: '/partners',
+
     },
   },
   {
@@ -88,7 +102,9 @@ export const sponsorsData: TypeCardData[] = [
       title: '',
     },
     links: {
-      moreLink: '/',
+
+      moreLink: '/partners',
+
     },
   },
   {
@@ -99,7 +115,9 @@ export const sponsorsData: TypeCardData[] = [
       title: '',
     },
     links: {
-      moreLink: '/',
+
+      moreLink: '/partners',
+
     },
   },
   {
@@ -110,7 +128,9 @@ export const sponsorsData: TypeCardData[] = [
       title: '',
     },
     links: {
-      moreLink: '/',
+
+      moreLink: '/partners',
+
     },
   },
   {
@@ -121,7 +141,9 @@ export const sponsorsData: TypeCardData[] = [
       title: '',
     },
     links: {
-      moreLink: '/',
+
+      moreLink: '/partners',
+
     },
   },
   {
@@ -132,7 +154,9 @@ export const sponsorsData: TypeCardData[] = [
       title: '',
     },
     links: {
-      moreLink: '/',
+
+      moreLink: '/partners',
+
     },
   },
   {
@@ -143,7 +167,9 @@ export const sponsorsData: TypeCardData[] = [
       title: '',
     },
     links: {
-      moreLink: '/',
+
+      moreLink: '/partners',
+
     },
   },
   {
@@ -154,7 +180,9 @@ export const sponsorsData: TypeCardData[] = [
       title: '',
     },
     links: {
-      moreLink: '/',
+
+      moreLink: '/partners',
+
     },
   },
   {
@@ -165,7 +193,9 @@ export const sponsorsData: TypeCardData[] = [
       title: '',
     },
     links: {
-      moreLink: '/',
+
+      moreLink: '/partners',
+
     },
   },
   {
@@ -176,7 +206,9 @@ export const sponsorsData: TypeCardData[] = [
       title: '',
     },
     links: {
-      moreLink: '/',
+
+      moreLink: '/partners',
+
     },
   },
   {
@@ -187,7 +219,9 @@ export const sponsorsData: TypeCardData[] = [
       title: '',
     },
     links: {
-      moreLink: '/',
+
+      moreLink: '/partners',
+
     },
   },
   {
@@ -198,7 +232,9 @@ export const sponsorsData: TypeCardData[] = [
       title: '',
     },
     links: {
-      moreLink: '/',
+
+      moreLink: '/partners',
+
     },
   },
 ];
