@@ -1,5 +1,4 @@
-import imgTest from '@/images/cart-image.png';
-
+import imgTest from '../../../../public/static/images/cart-image.png';
 import { TypeCardWithActions } from './section-with-slider/types';
 
 export const peopleHistory: TypeCardWithActions[] = [
